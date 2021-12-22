@@ -1,27 +1,27 @@
 <?php
-$title = 'Claires\'s Cars - Our Cars';
-$content = '';
+	$title = 'Claires\'s Cars - Our Cars';
 
-require '../templates/layout.html.php';
-
-	<main class="admin">
+	$content = 
+	'<main class="admin">
 
 	<section class="left">
 		<ul>
 			<li><a href="jaguar.php">Jaguar</a></li>
 			<li><a href="mercedes.php">Mercedes</a></li>
 			<li><a href="aston.php">Aston Martin</a></li>
-
 		</ul>
 	</section>
 
 	<section class="right">
-
 		<h1>Our cars</h1>
-
 	<ul class="cars">
+	</ul>
+	</section>
+	</main>';
 
+	require '../templates/layout.html.php';
 
+	/*
 	<?php
 	$pdo = new PDO('mysql:dbname=cars;host=mysql', 'student', 'student');
 	$cars = $pdo->prepare('SELECT * FROM cars LIMIT 10');
@@ -47,17 +47,9 @@ require '../templates/layout.html.php';
 		echo '</div>';
 		echo '</li>';
 	}
-
+	*/
 	?>
 
-</ul>
-
-</section>
-	</main>
 
 
-	<footer>
-		&copy; Claire's Cars 2018
-	</footer>
-</body>
-</html>
+	
