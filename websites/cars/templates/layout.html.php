@@ -24,6 +24,7 @@
 			<li><a href="/cars.php">Showroom</a></li>
 			<li><a href="/about.html">About Us</a></li>
 			<li><a href="/contact.php">Contact us</a></li>
+			<li><a href="/login.php">Admin Login</a></li>
 		</ul>
 	</nav>
 
