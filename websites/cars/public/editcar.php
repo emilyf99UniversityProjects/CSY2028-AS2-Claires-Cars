@@ -7,13 +7,7 @@
 	$content = 
 	'<main class="admin">
 
-	<section class="left">
-		<ul>
-			<li><a href="manufacturers.php">Manufacturers</a></li>
-			<li><a href="cars.php">Cars</a></li>
-
-		</ul>
-	</section>
+	<!-- insert left section admin template -->
 
 	<section class="right">
 	</section>

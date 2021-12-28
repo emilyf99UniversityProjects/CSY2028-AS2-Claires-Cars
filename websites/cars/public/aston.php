@@ -4,15 +4,7 @@
 	$content = 
 	'<main class="admin">
 
-	<section class="left">
-		<ul>
-			<li><a href="jaguar.php">Jaguar</a></li>
-			<li><a href="mercedes.php">Mercedes</a></li>
-			<li><a href="aston.php">Aston Martin</a></li>
-
-		</ul>
-	</section>
-
+	<!-- insert left section template -->
 	<section class="right">
 
 		<h1>Aston Martin Cars</h1>
