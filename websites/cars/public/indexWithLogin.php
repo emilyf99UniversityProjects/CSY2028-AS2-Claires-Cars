@@ -3,12 +3,9 @@
 	$pdo = new PDO('mysql:dbname=cars;host=mysql', 'student', 'student');
 	session_start(); */
 
+	$content = '';
 	$title = 'Claires\'s Cars - Admin';
-
-	$content = 
-	'<main class="admin">
-	</main>';
-
+	$class = 'admin';
 	require '../templates/layout.html.php';
 
 	/*

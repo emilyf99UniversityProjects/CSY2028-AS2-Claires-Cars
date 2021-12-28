@@ -3,11 +3,9 @@
 $pdo = new PDO('mysql:dbname=cars;host=mysql', 'student', 'student');
 	session_start();
 
-$title = 'Claire\'s Cars - Admin Login';
 
 $content = 
-    '<main class= login>
-    <form action="login.php" method="POST" >
+    '<form action="login.php" method="POST" >
     <h1>Admin Login</h1>
     <h3>Log into your account:</h3>
 
@@ -15,9 +13,9 @@ $content =
     <label>Password</label> <input type="password" name = "password" />
 
     <input type="submit" name="submit" value="Log In" />
-    </form>
-    </main';
-
+    </form>';
+$title = 'Claire\'s Cars - Admin Login';
+$class = 'login';
 require '../templates/layout.html.php';
 
 /*If the submit button is pressed then the email entered is compared to the database and its stored emails 
@@ -52,15 +50,13 @@ if(isset($_POST['submit'])) {
 //if submit is not pressed then the empty form is displayed for the user to enter thier login details
 else { 
     $content = 
-    '<main class= login>
-    <form action="login.php" method="POST" >
+    '<form action="login.php" method="POST" >
     <p>Log into your account:</p>
 
     <label>Username</label> <input type="text" name = "username" />
     <label>Password</label> <input type="password" name = "password" />
 
     <input type="submit" name="submit" value="Log In" />
-    </form>
-    </main';
+    </form>';
 }
 ?>

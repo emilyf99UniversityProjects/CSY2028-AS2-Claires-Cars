@@ -29,9 +29,9 @@
 	</nav>
 
 	<img src="/images/randombanner.php"/>
-
+	<main class = "<?php echo $class;?> ">
     <?php echo $content; ?>
-
+	</main>
 
 	<footer>
 		&copy; Claire's Cars 2021

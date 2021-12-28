@@ -8,14 +8,12 @@
 	require 'loadTemplate.php';
 	
 	$content=  
-	'<main class="admin">' .
 	loadTemplate('../templates/leftsectionadmin.html.php') .
 		'<section class="right">
-		</section>
-	</main>';
+		</section>';
 	
-
 	$title ='Claires\'s Cars - Admin';
+	$class = 'admin';
 	require '../templates/layout.html.php';
 
 	/*

@@ -2,17 +2,15 @@
 	require 'loadTemplate.php';
 	
 	$content=  
-'<main class="admin">' .
 loadTemplate('../templates/leftsectionadmin.html.php') .
 	'<section class="right">
 		<h1>Our cars</h1>
 	<ul class="cars">
 	</ul>
-	</section>
-	</main>';
-
+	</section>';
 
 $title ='Claires\'s Cars - Our Cars';
+$class = 'admin';
 require '../templates/layout.html.php';
 
 

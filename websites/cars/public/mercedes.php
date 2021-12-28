@@ -3,17 +3,16 @@
 	require 'loadTemplate.php';
 	
 	$content=  
-	'<main class="admin">' .
 	loadTemplate('../templates/leftsectioncars.html.php') .
 		'<section class="right">
 			<h1>Mercedes Cars</h1>
 				<ul class="cars">
 				</ul>
-		</section>
-	</main>';
+		</section>';
 	
 
 	$title = 'Claires\'s Cars - Mercedes';
+	$class = 'admin';
 	require '../templates/layout.html.php';
 
 

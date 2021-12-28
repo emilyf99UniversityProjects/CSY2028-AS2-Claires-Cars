@@ -1,9 +1,6 @@
 <?php 
-	$title = 'Claires\'s Cars - Contact Us';
-	
-	$content = '<main class="contact">
-	
-	<form action="contact.php" method="POST" >
+	$content = 
+	'<form action="contact.php" method="POST" >
     <h2>Contact Us</h2>
     <h3>Enter your details below:</h3>
 
@@ -14,8 +11,9 @@
 
 
     <input type="submit" name="submit" value="Submit" />
-    </form>
-    </main';
+    </form>';
 
+    $title = 'Claires\'s Cars - Contact Us';
+    $class = 'contact';
 	require '../templates/layout.html.php';
 ?>
