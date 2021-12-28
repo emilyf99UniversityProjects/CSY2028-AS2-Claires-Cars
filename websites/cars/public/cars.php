@@ -1,19 +1,20 @@
 <?php
-	$title = 'Claires\'s Cars - Our Cars';
-
-	$content = 
-	'<main class="admin">
-
-	<!-- insert left section template -->
-
-	<section class="right">
+	require 'loadTemplate.php';
+	
+	$content=  
+'<main class="admin">' .
+loadTemplate('../templates/leftsectionadmin.html.php') .
+	'<section class="right">
 		<h1>Our cars</h1>
 	<ul class="cars">
 	</ul>
 	</section>
 	</main>';
 
-	require '../templates/layout.html.php';
+
+$title ='Claires\'s Cars - Our Cars';
+require '../templates/layout.html.php';
+
 
 	/*
 	<?php
