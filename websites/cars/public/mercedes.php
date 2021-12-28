@@ -1,5 +1,5 @@
 <?php
-
+	require 'databasejoin.php';
 	require 'loadTemplate.php';
 	
 	$content=  
@@ -18,7 +18,6 @@
 
 	/*
 	<?php
-	$pdo = new PDO('mysql:dbname=cars;host=mysql', 'student', 'student');
 	$cars = $pdo->prepare('SELECT * FROM cars WHERE manufacturerId = 3');
 	$manu = $pdo->prepare('SELECT * FROM manufacturers WHERE id = :id');
 

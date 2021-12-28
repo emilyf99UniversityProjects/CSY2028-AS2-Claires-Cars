@@ -1,9 +1,5 @@
 <?php 
-
-$pdo = new PDO('mysql:dbname=cars;host=mysql', 'student', 'student');
-	session_start();
-
-
+require 'databasejoin.php';
 $content = 
     '<form action="login.php" method="POST" >
     <h1>Admin Login</h1>

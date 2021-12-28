@@ -1,4 +1,5 @@
 <?php
+	require 'databasejoin.php';
 	require 'loadTemplate.php';
 	
 	$content=  
@@ -16,7 +17,6 @@ require '../templates/layout.html.php';
 
 	/*
 	<?php
-	$pdo = new PDO('mysql:dbname=cars;host=mysql', 'student', 'student');
 	$cars = $pdo->prepare('SELECT * FROM cars LIMIT 10');
 	$manu = $pdo->prepare('SELECT * FROM manufacturers WHERE id = :id');
 

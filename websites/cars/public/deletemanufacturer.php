@@ -1,8 +1,5 @@
 <?php
-
-	/*$pdo = new PDO('mysql:dbname=cars;host=mysql', 'student', 'student');
-	session_start();*/
-
+	require 'databasejoin.php';
 	require 'loadTemplate.php';
 	
 	$content=  
