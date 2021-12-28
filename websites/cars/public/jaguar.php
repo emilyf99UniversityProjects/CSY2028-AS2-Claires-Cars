@@ -1,4 +1,5 @@
 <?php
+
 	$title ='Claires\'s Cars - Jaguar';
 	
 	$content = '<main class="admin">
