@@ -3,18 +3,17 @@
 $pdo = new PDO('mysql:dbname=cars;host=mysql', 'student', 'student');
 session_start();
 ?> */
-
-	$title = 'Claires\'s Cars - Admin';
-	$content =
-		'<main class="admin">
-		
-		<!-- insert left section admin template -->
-
-		<section class="right">
+require 'loadTemplate.php';
 	
+	$content=  
+	'<main class="admin">' .
+	loadTemplate('../templates/leftsectionadmin.html.php') .
+		'<section class="right">
 		</section>
-		</main>';
+	</main>';
+	
 
+	$title ='Claires\'s Cars - Admin';
 	require '../templates/layout.html.php';
 
 	/*
