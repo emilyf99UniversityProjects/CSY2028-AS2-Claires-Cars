@@ -1,21 +1,19 @@
 <?php
-	$title = 'Claires\'s Cars - Aston Martin';
-
-	$content = 
-	'<main class="admin">
-
-	<!-- insert left section template -->
-	<section class="right">
-
+require 'loadTemplate.php';
+	
+$content=  
+'<main class="admin">' .
+loadTemplate('../templates/leftsectioncars.html.php') .
+	'<section class="right">
 		<h1>Aston Martin Cars</h1>
-
-	<ul class="cars">
-	</ul>
-
+			<ul class="cars">
+			</ul>
 	</section>
-	</main>';
+</main>';
 
-	require '../templates/layout.html.php';
+
+$title ='Claires\'s Cars - Aston Martin';
+require '../templates/layout.html.php';
 	
 	
 	/*
