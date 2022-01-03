@@ -14,9 +14,6 @@ $title ='Claires\'s Cars - Our Cars';
 $class = 'admin';
 require '../templates/layout.html.php';
 
-
-	/*
-	<?php
 	$cars = $pdo->prepare('SELECT * FROM cars LIMIT 10');
 	$manu = $pdo->prepare('SELECT * FROM manufacturers WHERE id = :id');
 
@@ -40,7 +37,6 @@ require '../templates/layout.html.php';
 		echo '</div>';
 		echo '</li>';
 	}
-	*/
 	?>
 
 

@@ -15,9 +15,6 @@
 	$class = 'admin';
 	require '../templates/layout.html.php';
 
-
-	/*
-	<?php
 	$cars = $pdo->prepare('SELECT * FROM cars WHERE manufacturerId = 3');
 	$manu = $pdo->prepare('SELECT * FROM manufacturers WHERE id = :id');
 

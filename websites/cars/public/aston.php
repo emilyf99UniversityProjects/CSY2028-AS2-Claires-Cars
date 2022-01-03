@@ -14,8 +14,7 @@ $title ='Claires\'s Cars - Aston Martin';
 $class = 'admin';
 require '../templates/layout.html.php';
 	
-	
-	/*
+
 	$cars = $pdo->prepare('SELECT * FROM cars WHERE manufacturerId = 4');
 	$manu = $pdo->prepare('SELECT * FROM manufacturers WHERE id = :id');
 
@@ -39,6 +38,5 @@ require '../templates/layout.html.php';
 		echo '</div>';
 		echo '</li>';
 	}
-	*/
 	?>
 
