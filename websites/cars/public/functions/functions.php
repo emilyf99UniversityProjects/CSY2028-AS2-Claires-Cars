@@ -17,6 +17,19 @@ class DatabaseTable {
 		$stmt->execute($criteria);
 	}
 
+    public function insert($record) {
+        $keys = array_keys($record);
+
+        $values = implode(', ', $keys);
+        $valuesWithColon = implode(', :', $keys);
+
+        $query = 'INSERT INTO ' . $this->table . ' (' . $values . ') VALUES (:' . $valuesWithColon . ')';
+
+        $stmt = $this->pdo->prepare($query);
+
+        $stmt->execute($record);
+}
+
     /*
 	public function find($field, $value) {
 		$stmt = $this->pdo->prepare('SELECT * FROM ' . $this->table . ' WHERE ' . $field . ' = :value');
@@ -36,27 +49,6 @@ class DatabaseTable {
 		$stmt->execute();
 
 		return $stmt->fetchAll();
-	}
-
-	public function insert($record) {
-	        $keys = array_keys($record);
-
-	        $values = implode(', ', $keys);
-	        $valuesWithColon = implode(', :', $keys);
-
-	        $query = 'INSERT INTO ' . $this->table . ' (' . $values . ') VALUES (:' . $valuesWithColon . ')';
-
-	        $stmt = $this->pdo->prepare($query);
-
-	        $stmt->execute($record);
-	}
-
-	public function delete($id) {
-		$stmt = $this->pdo->prepare('DELETE FROM ' . $this->table . ' WHERE ' . $this->primaryKey . ' = :id');
-		$criteria = [
-			'id' => $id
-		];
-		$stmt->execute($criteria);
 	}
 
 

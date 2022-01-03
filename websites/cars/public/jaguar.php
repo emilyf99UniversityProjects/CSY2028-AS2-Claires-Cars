@@ -14,8 +14,6 @@
 	$class ='admin';
 	require '../templates/layout.html.php';
 
-	/*
-
 	$cars = $pdo->prepare('SELECT * FROM cars WHERE manufacturerId = 2');
 	$manu = $pdo->prepare('SELECT * FROM manufacturers WHERE id = :id');
 
@@ -39,6 +37,5 @@
 		echo '</div>';
 		echo '</li>';
 	}
-	*/
 	?> 
 

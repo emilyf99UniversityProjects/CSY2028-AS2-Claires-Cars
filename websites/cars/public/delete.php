@@ -13,7 +13,7 @@
 
 		if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
-			$deleteCar->delete($_POST['id']);
+			$delete->delete($_POST['id']);
 
 			echo $deleteCompleteText;
 

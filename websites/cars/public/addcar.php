@@ -11,10 +11,6 @@
 	$class = 'admin';
 	require '../templates/layout.html.php';
 
-	/*
-	<?php
-
-
 	if (isset($_POST['submit'])) {
 
 		$stmt = $pdo->prepare('INSERT INTO cars (name, description, price, manufacturerId) 
@@ -76,27 +72,14 @@
 
 			</form>
 			
-
-		
 		<?php
 		}
 
 		else {
-			?>
-			<h2>Log in</h2>
-
-			<form action="index.php" method="post">
-
-				<label>Password</label>
-				<input type="password" name="password" />
-
-				<input type="submit" name="submit" value="Log In" />
-			</form>
-		<?php
+			$content =
+		loadTemplate('../templates/loginform.html.php');
 		}
-
 	}
-	*/
 	?>
 
 
