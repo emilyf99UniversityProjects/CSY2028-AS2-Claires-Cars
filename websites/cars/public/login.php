@@ -1,5 +1,6 @@
 <?php 
 require 'databasejoin.php';
+require 'openingHours.php';
 $content = 
     '<form action="login.php" method="POST" >
     <h1>Admin Login</h1>

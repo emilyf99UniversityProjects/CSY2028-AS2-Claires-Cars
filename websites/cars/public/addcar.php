@@ -1,5 +1,6 @@
 <?php
 	require 'databasejoin.php';
+	require 'openingHours.php';
 	require 'loadTemplate.php';
 	
 	$content=  

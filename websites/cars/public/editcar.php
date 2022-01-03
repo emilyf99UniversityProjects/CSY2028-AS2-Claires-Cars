@@ -1,6 +1,7 @@
 <?php
 	require 'databasejoin.php';
 	require 'loadTemplate.php';
+	require 'openingHours.php';
 	
 	$content=  
 	loadTemplate('../templates/leftsectionadmin.html.php') .
