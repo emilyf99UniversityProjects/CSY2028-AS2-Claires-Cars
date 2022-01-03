@@ -11,13 +11,9 @@
 	$class = 'admin';
 	require '../templates/layout.html.php';
 
-	/*
-	<?php
-
-
 		if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
-			$products = $pdo->query('DELETE FROM manufacturers WHERE id = ' . $_POST['id']);
+			$deleteCar->delete($_POST['id']);
 
 			echo 'Manufacturer deleted';
 
@@ -38,7 +34,6 @@
 			</form>
 		<?php
 		}
-		*/
 	?>
 
 

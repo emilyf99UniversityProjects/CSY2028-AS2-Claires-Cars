@@ -11,14 +11,9 @@
 	$class = 'admin';
 	require '../templates/layout.html.php';
 
-	/*
-	<?php
+	if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
-
-		if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-
-			$stmt = $pdo->prepare('DELETE FROM cars WHERE id = :id');
-			$stmt->execute(['id' => $_POST['id']]);
+			$deleteCar->delete($_POST['id']);
 
 			echo 'Car deleted';
 
@@ -38,7 +33,7 @@
 				<input type="submit" name="submit" value="Log In" />
 			</form>
 		<?php
-		} */
+		} 
 	?>
 
 	
