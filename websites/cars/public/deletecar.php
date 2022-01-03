@@ -15,7 +15,7 @@
 
 			$deleteCar->delete($_POST['id']);
 
-			echo 'Car deleted';
+			echo '<p>Car deleted</p>';
 		}
 
 		else {
