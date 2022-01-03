@@ -5,6 +5,7 @@ $class = 'jobs';
 $content = '';
 require 'databasejoin.php';
 require 'openingHours.php';
+require 'loadTemplate.php';
 require '../templates/layout.html.php';
 if ($match = true) {
     /* search through all records */

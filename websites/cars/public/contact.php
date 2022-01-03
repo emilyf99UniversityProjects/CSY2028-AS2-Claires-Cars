@@ -1,6 +1,8 @@
 <?php 
     require 'databasejoin.php';
+    require 'loadTemplate.php';
     require 'openingHours.php';
+    
 	$content = 
 	'<form action="contact.php" method="POST" >
     <h2>Contact Us</h2>

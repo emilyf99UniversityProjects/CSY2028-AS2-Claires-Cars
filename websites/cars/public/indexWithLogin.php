@@ -1,7 +1,8 @@
 <?php
 	require 'databasejoin.php';
+	require 'loadTemplate.php';
 	require 'openingHours.php';
-	
+
 	$content = '';
 	$title = 'Claires\'s Cars - Admin';
 	$class = 'admin';

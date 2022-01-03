@@ -1,5 +1,6 @@
 <?php 
 require 'databasejoin.php';
+require 'loadTemplate.php';
 require 'openingHours.php';
 $content = 
     '<form action="login.php" method="POST" >
