@@ -5,4 +5,5 @@
         public function __construct($jobconnect) {
         $this-> jobconnect = $jobconnect;
     }
+}
 ?>

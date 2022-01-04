@@ -5,4 +5,5 @@
         public function __construct($inquiriesconnect) {
         $this-> inquiriesconnect = $inquiriesconnect;
     }
+}
 ?>

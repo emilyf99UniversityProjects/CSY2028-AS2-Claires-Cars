@@ -5,5 +5,5 @@ class ManufacturersController {
     public function __construct($manufacturerconnect) {
     $this-> manufacturerconnect = $manufacturerconnect;
     }
-
+}
 ?>
