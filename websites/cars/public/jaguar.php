@@ -13,6 +13,7 @@
 
 	$title ='Claires\'s Cars - Jaguar';
 	$class ='admin';
+	
 	require '../templates/layout.html.php';
 
 	$cars = $pdo->prepare('SELECT * FROM cars WHERE manufacturerId = 2');

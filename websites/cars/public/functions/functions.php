@@ -28,9 +28,8 @@ class DatabaseTable {
         $stmt = $this->pdo->prepare($query);
 
         $stmt->execute($record);
-}
+	}
 
-    /*
 	public function find($field, $value) {
 		$stmt = $this->pdo->prepare('SELECT * FROM ' . $this->table . ' WHERE ' . $field . ' = :value');
 
@@ -68,7 +67,7 @@ class DatabaseTable {
 	         $parameters = [];
 	         foreach ($record as $key => $value) {
 	                $parameters[] = $key . ' = :' .$key;
-	         }
+	         	}
 
 	         $query .= implode(', ', $parameters);
 	         $query .= ' WHERE ' . $this->primaryKey . ' = :primaryKey';
@@ -81,4 +80,3 @@ class DatabaseTable {
 	}
 
 } 
-*/

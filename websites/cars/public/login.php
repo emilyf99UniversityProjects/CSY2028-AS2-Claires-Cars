@@ -3,15 +3,7 @@ require 'databasejoin.php';
 require 'loadTemplate.php';
 require 'openingHours.php';
 $content = 
-    '<form action="login.php" method="POST" >
-    <h1>Admin Login</h1>
-    <h3>Log into your account:</h3>
-
-    <label>Username</label> <input type="text" name = "username" />
-    <label>Password</label> <input type="password" name = "password" />
-
-    <input type="submit" name="submit" value="Log In" />
-    </form>';
+    loadTemplate('../templates/loginform.html.php');
 $title = 'Claire\'s Cars - Admin Login';
 $class = 'login';
 require '../templates/layout.html.php';
