@@ -4,10 +4,9 @@
 	require 'loadTemplate.php';
 	
 	$content=  
-	loadTemplate('../templates/leftsectionadmin.html.php') .
-		'<section class="right">
-		</section>';
-	
+	loadTemplate('../templates/leftsectionadmin.html.php')
+	.
+	loadTemplate('../templates/rightsection.html.php');
 	$title ='Claires\'s Cars - Admin';
 	$class = 'admin';
 	require '../templates/layout.html.php';
