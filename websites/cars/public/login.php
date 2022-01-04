@@ -8,7 +8,7 @@ $title = 'Claire\'s Cars - Admin Login';
 $class = 'login';
 require '../templates/layout.html.php';
 
-/*If the submit button is pressed then the email entered is compared to the database and its stored emails 
+/*If the submit button is pressed then the name entered is compared to the database and its stored names 
 to find a match,
 this first isset block is to search for a normal user in the user table in the database*/ 
 if(isset($_POST['submit'])) {

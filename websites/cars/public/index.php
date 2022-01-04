@@ -5,8 +5,24 @@
 	require '../functions/functions.php';
 	require '../controllers/CarsController.php';
 
-	$getDatabaseFunctions = new DatabaseTable($pdo, 'cars', 'id');
-	$CarsContoller = new CarsController($getDatabaseFunctions);
+	$Cars = new DatabaseTable($pdo, 'cars', 'id');
+	$CarsController = new CarsController($Cars);
+
+	$Admins = new DatabaseTable($pdo, 'admins', 'id');
+	$LoginController = new LoginController($Admins);
+
+	$Manufacturers = new DatabaseTable($pdo, 'manufacturers', 'id');
+	$ManufacturersController = new ManufacturersController($Manufacturers);
+
+	$Jobs = new DatabaseTable($pdo, 'jobs', 'id');
+	$JobController = new ManufacturersController($Jobs);
+
+	$News = new DatabaseTable($pdo, 'news', 'id');
+	$NewsController = new NewsController($News);
+
+	$Inquiries = new DatabaseTable($pdo, 'inquiries', 'id');
+	$InquiriesController = new InquiriesController($Inquiries);
+
 
 	if ($_SERVER['REQUEST_URI'] !== '/') {
 		$functionName = ltrim(explode('?', $_SERVER['REQUEST_URI'])[0], '/');

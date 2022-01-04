@@ -1,0 +1,9 @@
+<?php
+class ManufacturersController {
+    private $manufacturersconnect;
+
+    public function __construct($manufacturersconnect) {
+    $this-> manufacturersconnect = $manufacturersconnect;
+    }
+
+?>

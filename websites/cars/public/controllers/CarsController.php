@@ -1,13 +1,13 @@
 <?php
 class CarsController {
-    private $getDatabaseFunctions;
+    private $carsconnect;
 
-    public function __construct($getDatabaseFunctions) {
-    $this-> getDatabaseFunctions = $getDatabaseFunctions;
+    public function __construct($carsconnect) {
+    $this-> carsconnect = $carsconnect;
     }
 
     public function showroomlist() {
-        $cars = $this->$getDatabaseFunctions->findall();
+        $cars = $this->$carsconnect->findall();
         return []
     }
 
