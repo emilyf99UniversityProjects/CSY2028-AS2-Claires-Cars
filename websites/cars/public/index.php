@@ -2,26 +2,27 @@
 	require 'sessionstart.php';
 	require 'loadTemplate.php';
 	require 'openingHours.php';
-	require '../functions/functions.php';
-	require '../controllers/CarsController.php';
+	require 'databasejoin.php';
+	require 'functions/functions.php';
+	require 'controllers/CarsController.php';
 
-	$Cars = new DatabaseTable($pdo, 'cars', 'id');
-	$CarsController = new CarsController($Cars);
-
-	$Admins = new DatabaseTable($pdo, 'admins', 'id');
-	$LoginController = new LoginController($Admins);
+	$carsconnect = new DatabaseTable($pdo, 'cars', 'id');
+	$CarsController = new CarsController($carsconnect);
+	
+	$adminconnect = new DatabaseTable($pdo, 'admins', 'id');
+	$LoginController = new LoginController($adminconnect);
 
 	$Manufacturers = new DatabaseTable($pdo, 'manufacturers', 'id');
 	$ManufacturersController = new ManufacturersController($Manufacturers);
 
-	$Jobs = new DatabaseTable($pdo, 'jobs', 'id');
-	$JobController = new ManufacturersController($Jobs);
+	$jobconnect = new DatabaseTable($pdo, 'jobs', 'id');
+	$JobController = new JobController($jobconnect);
 
-	$News = new DatabaseTable($pdo, 'news', 'id');
-	$NewsController = new NewsController($News);
+	$newsconnect = new DatabaseTable($pdo, 'news', 'id');
+	$NewsController = new NewsController($newsconnect);
 
-	$Inquiries = new DatabaseTable($pdo, 'inquiries', 'id');
-	$InquiriesController = new InquiriesController($Inquiries);
+	$inquiriesconnect = new DatabaseTable($pdo, 'inquiries', 'id');
+	$InquiriesController = new InquiriesController($inquiriesconnect);*/
 
 
 	if ($_SERVER['REQUEST_URI'] !== '/') {
@@ -33,10 +34,9 @@
 	$page = $CarsController->home();
 	}
 
-	$content =
-		 '<p>Welcome to Claire\'s Cars, Northampton\'s specialist in classic and import cars.</p>';
-		 
-	$title = 'Claires\'s Cars - Home';
-	$class = 'home';
+	$content = loadTemplate('../templates/' . $page['template'], $page['variables']);
+	$title = $page['title'];
+	$class = $page['class'];
+
 	require '../templates/layout.html.php';
 ?>
