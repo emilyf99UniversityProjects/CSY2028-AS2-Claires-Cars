@@ -28,7 +28,7 @@ class Cars {
         ];
     }
 
-    public function showroom() {
+    public function cars() {
         $cars = $this->carsconnect->findAll();
         return [
             'template' => 'cars.html.php',

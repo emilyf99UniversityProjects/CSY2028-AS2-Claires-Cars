@@ -7,7 +7,7 @@ namespace load\controllers;
         $this-> newsconnect = $newsconnect;
         }
 
-        public function newspage() {
+        public function news() {
             $news = $this->newsconnect->findAll();
             return [
                 'template' => 'news.html.php',

@@ -1,5 +1,4 @@
 <?php
-
     namespace load; 
     class Routes implements \CSY2028\Routes {
         public function getPage($route) {
@@ -19,7 +18,7 @@
 	$controllers['jobs'] = new \load\controllers\Jobs($jobconnect);
 	$controllers['admins'] = new \load\controllers\Login($adminconnect);
 	$controllers['news'] = new \load\controllers\News($newsconnect);
-	$controllers['manufacturers'] = new \load\controllers\News($manufacturersconnect);
+	$controllers['manufacturers'] = new \load\controllers\Manufacturers($manufacturersconnect);
 	
 	if ($route == '') {
 			$page = $controllers['cars']->home();
