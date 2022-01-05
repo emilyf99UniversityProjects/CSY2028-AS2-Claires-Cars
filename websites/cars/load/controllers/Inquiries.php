@@ -1,5 +1,6 @@
 <?php
-    class InquiriesController { 
+namespace load\controllers;
+    class Inquiries { 
         private $inquiriesconnect;
 
         public function __construct($inquiriesconnect) {

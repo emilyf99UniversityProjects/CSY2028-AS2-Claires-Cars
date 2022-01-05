@@ -1,7 +1,7 @@
 <?php
-	require 'databasejoin.php';
+	require '../../databasejoin.php';
 	require 'loadTemplate.php';
-	require 'openingHours.php';
+	require '../../openingHours.php';
 	
 	$content=  
 	loadTemplate('../templates/leftsectioncars.html.php') .

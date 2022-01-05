@@ -1,5 +1,6 @@
 <?php
-    class LoginController { 
+namespace load\controllers;
+    class Login { 
         private $adminconnect;
 
         public function __construct($adminconnect) {

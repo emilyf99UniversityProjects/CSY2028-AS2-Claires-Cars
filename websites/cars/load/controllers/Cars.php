@@ -1,5 +1,6 @@
 <?php
-class CarsController {
+namespace load\controllers;
+class Cars {
     private $carsconnect;
 
     public function __construct($carsconnect) {
@@ -27,7 +28,7 @@ class CarsController {
         ];
     }
 
-    public function cars() {
+    public function showroom() {
         $cars = $this->carsconnect->findAll();
         return [
             'template' => 'cars.html.php',

@@ -1,4 +1,5 @@
 <?php
+namespace CSY2028;
 class DatabaseTable {
 	private $pdo;
 	private $table;
@@ -55,7 +56,7 @@ class DatabaseTable {
 		try {
 			$this->insert($record);
 		}
-		catch (Exception $e) {
+		catch (\Exception $e) {
 			$this->update($record);
 		}
 	}

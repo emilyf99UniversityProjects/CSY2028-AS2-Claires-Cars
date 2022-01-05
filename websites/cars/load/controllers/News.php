@@ -1,12 +1,13 @@
 <?php
-    class NewsController { 
+namespace load\controllers;
+    class News { 
         private $newsconnect;
 
         public function __construct($newsconnect) {
         $this-> newsconnect = $newsconnect;
         }
 
-        public function news() {
+        public function newspage() {
             $news = $this->newsconnect->findAll();
             return [
                 'template' => 'news.html.php',

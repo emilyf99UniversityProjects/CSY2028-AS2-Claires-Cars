@@ -1,5 +1,6 @@
 <?php
-    class JobsController { 
+namespace load\controllers;
+    class Jobs { 
         private $jobconnect;
 
         public function __construct($jobconnect) {
