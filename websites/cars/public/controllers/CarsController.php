@@ -9,12 +9,22 @@ class CarsController {
     public function home(){
         $cars = $this->carsconnect->findAll();
         return [
-        'template' => '../templates/index.html.php',
-        'title' => 'Claires\'s Cars - Home', 'class' => 'home', 
-        'variables' => [
-            'cars' => $cars]
+        'template' => 'home.html.php',
+        'variables' => ['cars' => $cars],
+        'title' => 'Claires\'s Cars - Home',
+        'class' => 'home'
         ];
 
+    }
+
+    public function about(){
+        $cars = $this ->carsconnect->findAll();
+        return[
+        'template' => 'about.html.php',
+        'variables' => ['cars' => $cars], 
+        'title' => 'Claires\'s Cars - About',
+        'class' => 'about'
+        ];
     }
 
     /*

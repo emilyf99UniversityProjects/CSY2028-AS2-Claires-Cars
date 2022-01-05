@@ -13,11 +13,15 @@
 	require 'controllers/InquiriesController.php'; */
 
 	$carsconnect = new DatabaseTable($pdo, 'cars', 'id');
-	$CarsController = new CarsController($carsconnect);
 	
+
+	$controllers = [];
+	$controllers['cars'] = new CarsController($carsconnect);
+	
+	/*
 	$adminconnect = new DatabaseTable($pdo, 'admins', 'id');
 	$LoginController = new LoginController($adminconnect);
-
+	*/
 	/*
 
 	$Manufacturers = new DatabaseTable($pdo, 'manufacturers', 'id');
@@ -32,15 +36,17 @@
 	$inquiriesconnect = new DatabaseTable($pdo, 'inquiries', 'id');
 	$InquiriesController = new InquiriesController($inquiriesconnect); */
 
-
-	if ($_SERVER['REQUEST_URI'] !== '/') {
-		$functionName = ltrim(explode('?', $_SERVER['REQUEST_URI'])[0], '/');
-		$page = $CarsController->$functionName();
+	$route = ltrim(explode('?', $_SERVER['REQUEST_URI'])[0], '/');
+	if ($route == '') {
+			$page = $controllers['cars']->home();
+	}
+	else {
+			list($controllerName, $functionName) = explode('/', $route);
+			$controller = $controllers[$controllerName];
+			$page = $controller->$functionName();
+	
 	}
 	
-	else {
-	$page = $CarsController->home();
-	}
 
 	$content = loadTemplate('../templates/' . $page['template'], $page['variables']);
 	$title = $page['title'];

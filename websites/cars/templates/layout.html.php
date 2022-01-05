@@ -20,12 +20,12 @@
 		
 	<nav>
 		<ul>
-			<li><a href="/home.php">Home</a></li>
-			<li><a href="/cars.php">Showroom</a></li>
-			<li><a href="/about.php">About Us</a></li>
-			<li><a href="/contact.php">Contact us</a></li>
-			<li><a href="/clairescareers.php">Claire's Careers</a></li>
-			<li><a href="/login.php">Admin Login</a></li>
+			<li><a href="/">Home</a></li>
+			<li><a href="/cars/cars">Showroom</a></li>
+			<li><a href="/cars/about">About Us</a></li>
+			<li><a href="/InquiriesController/contact">Contact us</a></li>
+			<li><a href="/JobsController/clairescareers">Claire's Careers</a></li>
+			<li><a href="/LoginController/login">Admin Login</a></li>
 		</ul>
 	</nav>
 

@@ -5,6 +5,10 @@
         public function __construct($adminconnect) {
         $this-> adminconnect = $adminconnect;
         }
+
+        /*
+        public function login() {
+        }
+        */
     }
 ?>
-
