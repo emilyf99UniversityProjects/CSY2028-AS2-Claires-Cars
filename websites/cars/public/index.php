@@ -5,18 +5,21 @@
 	require 'databasejoin.php';
 	require 'functions/functions.php';
 	require 'controllers/CarsController.php';
-	require 'controllers/LoginController.php';
+	require 'controllers/InquiriesController.php'; 
 	/*
+	require 'controllers/LoginController.php';
 	require 'controllers/ManufacturersController.php';
 	require 'controllers/JobController.php';
 	require 'controllers/NewsController.php';
 	require 'controllers/InquiriesController.php'; */
 
 	$carsconnect = new DatabaseTable($pdo, 'cars', 'id');
+	$inquiriesconnect = new DatabaseTable($pdo, 'inquiries', 'id');
 	
 
 	$controllers = [];
 	$controllers['cars'] = new CarsController($carsconnect);
+	$controllers['inquiries'] = new InquiriesController($inquiriesconnect);
 	
 	/*
 	$adminconnect = new DatabaseTable($pdo, 'admins', 'id');
@@ -32,9 +35,7 @@
 
 	$newsconnect = new DatabaseTable($pdo, 'news', 'id');
 	$NewsController = new NewsController($newsconnect);
-
-	$inquiriesconnect = new DatabaseTable($pdo, 'inquiries', 'id');
-	$InquiriesController = new InquiriesController($inquiriesconnect); */
+	*/
 
 	$route = ltrim(explode('?', $_SERVER['REQUEST_URI'])[0], '/');
 	if ($route == '') {
@@ -47,7 +48,6 @@
 	
 	}
 	
-
 	$content = loadTemplate('../templates/' . $page['template'], $page['variables']);
 	$title = $page['title'];
 	$class = $page['class'];

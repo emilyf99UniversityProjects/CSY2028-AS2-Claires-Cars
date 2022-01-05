@@ -23,7 +23,7 @@
 			<li><a href="/">Home</a></li>
 			<li><a href="/cars/cars">Showroom</a></li>
 			<li><a href="/cars/about">About Us</a></li>
-			<li><a href="/InquiriesController/contact">Contact us</a></li>
+			<li><a href="/inquiries/contact">Contact us</a></li>
 			<li><a href="/JobsController/clairescareers">Claire's Careers</a></li>
 			<li><a href="/LoginController/login">Admin Login</a></li>
 		</ul>
