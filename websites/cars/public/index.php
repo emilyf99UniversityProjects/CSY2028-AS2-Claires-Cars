@@ -8,14 +8,15 @@
 	require 'controllers/InquiriesController.php'; 
 	require 'controllers/JobsController.php';
 	require 'controllers/LoginController.php';
-	/*
-	require 'controllers/ManufacturersController.php';
-	require 'controllers/NewsController.php';*/
+	require 'controllers/NewsController.php';
+	
+	//require 'controllers/ManufacturersController.php';
 
 	$carsconnect = new DatabaseTable($pdo, 'cars', 'id');
 	$inquiriesconnect = new DatabaseTable($pdo, 'inquiries', 'id');
 	$jobconnect = new DatabaseTable($pdo, 'jobs', 'id');
 	$adminconnect = new DatabaseTable($pdo, 'admins', 'id');
+	$newsconnect = new DatabaseTable($pdo, 'news', 'id');
 	
 
 	$controllers = [];
@@ -23,14 +24,13 @@
 	$controllers['inquiries'] = new InquiriesController($inquiriesconnect);
 	$controllers['jobs'] = new JobsController($jobconnect);
 	$controllers['admins'] = new LoginController($adminconnect);
+	$controllers['news'] = new NewsController($newsconnect);
 	
 
 	/*
 	$Manufacturers = new DatabaseTable($pdo, 'manufacturers', 'id');
 	$ManufacturersController = new ManufacturersController($Manufacturers);
 
-	$newsconnect = new DatabaseTable($pdo, 'news', 'id');
-	$NewsController = new NewsController($newsconnect);
 	*/
 
 	$route = ltrim(explode('?', $_SERVER['REQUEST_URI'])[0], '/');

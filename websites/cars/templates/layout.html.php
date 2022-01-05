@@ -20,7 +20,7 @@
 		
 	<nav>
 		<ul>
-			<li><a href="/">Home</a></li>
+			<li><a href="/news/news">Home</a></li>
 			<li><a href="/cars/cars">Showroom</a></li>
 			<li><a href="/cars/about">About Us</a></li>
 			<li><a href="/inquiries/contact">Contact us</a></li>
