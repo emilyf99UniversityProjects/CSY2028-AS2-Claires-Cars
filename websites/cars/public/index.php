@@ -6,20 +6,22 @@
 	require 'functions/functions.php';
 	require 'controllers/CarsController.php';
 	require 'controllers/InquiriesController.php'; 
+	require 'controllers/JobsController.php';
 	/*
 	require 'controllers/LoginController.php';
 	require 'controllers/ManufacturersController.php';
-	require 'controllers/JobController.php';
 	require 'controllers/NewsController.php';
 	require 'controllers/InquiriesController.php'; */
 
 	$carsconnect = new DatabaseTable($pdo, 'cars', 'id');
 	$inquiriesconnect = new DatabaseTable($pdo, 'inquiries', 'id');
+	$jobconnect = new DatabaseTable($pdo, 'jobs', 'id');
 	
 
 	$controllers = [];
 	$controllers['cars'] = new CarsController($carsconnect);
 	$controllers['inquiries'] = new InquiriesController($inquiriesconnect);
+	$controllers['jobs'] = new JobsController($jobconnect);
 	
 	/*
 	$adminconnect = new DatabaseTable($pdo, 'admins', 'id');
@@ -29,9 +31,6 @@
 
 	$Manufacturers = new DatabaseTable($pdo, 'manufacturers', 'id');
 	$ManufacturersController = new ManufacturersController($Manufacturers);
-
-	$jobconnect = new DatabaseTable($pdo, 'jobs', 'id');
-	$JobController = new JobController($jobconnect);
 
 	$newsconnect = new DatabaseTable($pdo, 'news', 'id');
 	$NewsController = new NewsController($newsconnect);

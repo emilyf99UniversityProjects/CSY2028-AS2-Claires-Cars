@@ -6,8 +6,14 @@
         $this-> jobconnect = $jobconnect;
     }
 
-    class function clairescareers() {
-
+    public function clairescareers() {
+        $jobs = $this->jobconnect->findAll();
+        return [
+            'template' => 'clairescareers.html.php',
+            'variables' => ['jobs' => $jobs],
+            'title' => 'Claire\'s Careers',
+            'class' => 'jobs'
+        ];
     }
 }
 ?>
