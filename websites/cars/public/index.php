@@ -7,28 +7,25 @@
 	require 'controllers/CarsController.php';
 	require 'controllers/InquiriesController.php'; 
 	require 'controllers/JobsController.php';
-	/*
 	require 'controllers/LoginController.php';
+	/*
 	require 'controllers/ManufacturersController.php';
-	require 'controllers/NewsController.php';
-	require 'controllers/InquiriesController.php'; */
+	require 'controllers/NewsController.php';*/
 
 	$carsconnect = new DatabaseTable($pdo, 'cars', 'id');
 	$inquiriesconnect = new DatabaseTable($pdo, 'inquiries', 'id');
 	$jobconnect = new DatabaseTable($pdo, 'jobs', 'id');
+	$adminconnect = new DatabaseTable($pdo, 'admins', 'id');
 	
 
 	$controllers = [];
 	$controllers['cars'] = new CarsController($carsconnect);
 	$controllers['inquiries'] = new InquiriesController($inquiriesconnect);
 	$controllers['jobs'] = new JobsController($jobconnect);
+	$controllers['admins'] = new LoginController($adminconnect);
 	
-	/*
-	$adminconnect = new DatabaseTable($pdo, 'admins', 'id');
-	$LoginController = new LoginController($adminconnect);
-	*/
-	/*
 
+	/*
 	$Manufacturers = new DatabaseTable($pdo, 'manufacturers', 'id');
 	$ManufacturersController = new ManufacturersController($Manufacturers);
 

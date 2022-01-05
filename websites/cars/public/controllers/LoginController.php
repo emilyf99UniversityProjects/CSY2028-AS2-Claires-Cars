@@ -6,9 +6,14 @@
         $this-> adminconnect = $adminconnect;
         }
 
-        /*
         public function login() {
+
+            return [
+                'template' => 'loginform.html.php',
+                'variables' => [''],
+                'title' => 'Claire\'s Cars - Admin Login',
+                'class' => 'login'
+            ];
         }
-        */
     }
 ?>

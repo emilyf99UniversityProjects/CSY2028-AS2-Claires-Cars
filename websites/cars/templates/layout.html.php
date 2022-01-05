@@ -25,7 +25,7 @@
 			<li><a href="/cars/about">About Us</a></li>
 			<li><a href="/inquiries/contact">Contact us</a></li>
 			<li><a href="/jobs/clairescareers">Claire's Careers</a></li>
-			<li><a href="/LoginController/login">Admin Login</a></li>
+			<li><a href="/admins/login">Admin Login</a></li>
 		</ul>
 	</nav>
 
