@@ -27,11 +27,15 @@ class CarsController {
         ];
     }
 
-    /*
-    public function showroomlist() {
-        $cars = $this->$carsconnect->findAll();
-        return []
-    }*/
+    public function cars() {
+        $cars = $this->carsconnect->findAll();
+        return [
+            'template' => 'cars.html.php',
+            'variables' => ['cars' => $cars], 
+            'title' => 'Claires\'s Cars - Our Cars',
+            'class' => 'admin'
+            ];
+    }
 
    
 

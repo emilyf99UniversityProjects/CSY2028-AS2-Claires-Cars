@@ -5,5 +5,9 @@
         public function __construct($jobconnect) {
         $this-> jobconnect = $jobconnect;
     }
+
+    class function clairescareers() {
+
+    }
 }
 ?>
