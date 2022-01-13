@@ -7,6 +7,36 @@ namespace load\controllers;
         $this-> adminconnect = $adminconnect;
         }
 
+        public function loginSubmit() {
+            $admin = $this->adminconnect->find('username', $_POST['username']);
+            if(isset($_POST['submit'])) {
+               // var_dump($admin);
+               if (isset($admin[0])) {
+                  // $user = $admin->fetch();
+                  if ($_POST['password'] == $admin[0]['password']) {
+                     // var_dump($_SESSION['loggedin']);
+         
+                     $_SESSION['loggedin'] = true;
+                     $_SESSION['loggedin'] = $admin[0]['id'];
+         
+                     return [
+                        'template' => 'logincomplete.html.php',
+                        'title' => 'Claire\'s Cars - Admin Login',
+                        'variables' => ['admin' => $admin],
+                        'class' => 'login'
+                      ];
+                  }
+               }
+            }
+         
+            return [
+               'template' => 'loginform.html.php',
+               'title' => 'Claire\'s Cars - Admin Login',
+               'variables' => ['admin' => $admin],
+               'class' => 'login'
+             ];
+         }
+
         public function login() {
 
             return [
@@ -14,6 +44,17 @@ namespace load\controllers;
                 'variables' => [''],
                 'title' => 'Claire\'s Cars - Admin Login',
                 'class' => 'login'
+            ];
+        }
+
+        public function logout() {
+            unset($_SESSION['loggedin']);
+
+            return [
+                'template' => 'logout.html.php',
+                'variables' => [''],
+                'title' => 'Claire\'s Cars - Admin Logout',
+                'class' => 'logout'
             ];
         }
     }

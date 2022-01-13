@@ -26,6 +26,11 @@
 			<li><a href="/inquiries/contact">Contact us</a></li>
 			<li><a href="/jobs/clairescareers">Claire's Careers</a></li>
 			<li><a href="/admins/login">Admin Login</a></li>
+			<?php
+				if(isset($_SESSION['loggedin'])) {
+				echo '<li><a href="/admins/logout">Admin Logout</a></li>';
+				echo  '<li><a href="/admins/adminhub">Admin Hub</a><li>';
+				}?>
 		</ul>
 	</nav>
 
