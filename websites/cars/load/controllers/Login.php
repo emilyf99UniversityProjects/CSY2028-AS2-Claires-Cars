@@ -1,14 +1,14 @@
 <?php
 namespace load\controllers;
     class Login { 
-        private $adminconnect;
+        private $loginconnect;
 
-        public function __construct($adminconnect) {
-        $this-> adminconnect = $adminconnect;
+        public function __construct($loginconnect) {
+        $this-> loginconnect = $loginconnect;
         }
 
         public function loginSubmit() {
-            $admin = $this->adminconnect->find('username', $_POST['username']);
+            $admin = $this->loginconnect->find('username', $_POST['username']);
             if(isset($_POST['submit'])) {
                // var_dump($admin);
                if (isset($admin[0])) {
@@ -57,5 +57,17 @@ namespace load\controllers;
                 'class' => 'logout'
             ];
         }
+
+        public function adminhub() {
+
+            return [
+                'template' => 'adminhub.html.php',
+                'variables' => [''],
+                'title' => 'Claire\'s Cars - Admin Hub',
+                'class' => 'admin'
+            ];
+        }
+
+        
     }
 ?>
