@@ -59,13 +59,22 @@ namespace load\controllers;
         }
 
         public function adminhub() {
-
-            return [
-                'template' => 'adminhub.html.php',
-                'variables' => [''],
-                'title' => 'Claire\'s Cars - Admin Hub',
-                'class' => 'admin'
-            ];
+            if(isset($_SESSION['loggedin'])) {
+                return [
+                    'template' => 'adminhub.html.php',
+                    'variables' => [''],
+                    'title' => 'Claire\'s Cars - Admin Hub',
+                    'class' => 'admin'
+                ];
+            }
+            else {
+                return [
+                    'template' => 'loginerror.html.php',
+                    'variables' => [''],
+                    'title' => 'Claire\'s Cars - Login Error',
+                    'class' => 'admin'
+                ];
+            }
         }
 
         
