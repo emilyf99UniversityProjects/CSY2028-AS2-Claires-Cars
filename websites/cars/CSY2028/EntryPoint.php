@@ -7,21 +7,32 @@ class EntryPoint {
  }
  public function run() {
  $route = ltrim(explode('?', $_SERVER['REQUEST_URI'])[0], '/');
- $page = $this->routes->getPage($route);
+ $this->routes->checkLogin($route);
+ if ($route == '') {
+    $route = $this->routes->getDefaultRoute();
+ }
+ 
+ list($controllerName, $functionName) = explode('/', $route);
+
+ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $functionName = $functionName . 'Submit';
+ }
+
+ $controller = $this->routes->getController($controllerName);
+ $page = $controller->$functionName();
+
  $content = $this->loadTemplate('../templates/' . $page['template'], $page['variables']);
  $title = $page['title'];
  $class = $page['class'];
  require '../templates/layout.html.php';
  }
-
+ 
  public function loadTemplate($fileName, $templateVars) {
  extract($templateVars);
  ob_start();
  require $fileName;
- $buffer = ob_get_clean();
- return $buffer;
+ $contents = ob_get_clean();
+ return $contents;
  }
 }
-?>
-
 
