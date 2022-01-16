@@ -77,6 +77,25 @@ namespace load\controllers;
             }
         }
 
+        public function manageadmins() {
+            $admins = $this->loginconnect->findAll();
+            if(isset($_SESSION['loggedin'])) {
+                return [
+                    'template' => 'manageadmin.html.php',
+                    'variables' => ['admins' => $admins],
+                    'title' => 'Claire\'s Cars - Manage Admin Logins',
+                    'class' => 'admin'
+                ];
+            }
+            else {
+                return [
+                    'template' => 'loginerror.html.php',
+                    'variables' => [''],
+                    'title' => 'Claire\'s Cars - Login Error',
+                    'class' => 'admin'
+                ];
+            }
+        }
         
     }
 ?>

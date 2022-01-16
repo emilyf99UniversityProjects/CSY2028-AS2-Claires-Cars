@@ -20,7 +20,7 @@ namespace load\controllers;
     public function contactSubmit() {
         $inquiries = $this->inquiriesconnect->insert($record);
         if(isset($_POST['formsubmit'])) {
-            $record = 'contact';
+           // $record = //;
             $values = [
                 'name' => $_POST['name'],
                 'email' => $_POST['email'],
