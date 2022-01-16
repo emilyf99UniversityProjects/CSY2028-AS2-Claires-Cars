@@ -38,7 +38,25 @@ class Cars {
             ];
     }
 
-   
+    public function managearchivecars() {
+        $cars = $this->carsconnect->find('archived', 1);
+        if(isset($_SESSION['loggedin'])) {
+            return [
+                'template' => 'managearchivecars.html.php',
+                'variables' => ['cars' => $cars],
+                'title' => 'Claire\'s Cars - Manage Archived Cars Logins',
+                'class' => 'admin'
+            ];
+        }
+        else {
+            return [
+                'template' => 'loginerror.html.php',
+                'variables' => [''],
+                'title' => 'Claire\'s Cars - Login Error',
+                'class' => 'admin'
+            ];
+        }
+    }
 
 }
 
