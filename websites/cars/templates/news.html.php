@@ -13,5 +13,12 @@
 		echo '</div>';
 	 	echo '</li>';
     }
+
+    if(!$news) {
+        ?>
+        <p>Claire's Cars currently has no news articles.</p>
+        <p>Please check soon as we frequently add articles</p>
+    <?php
+    }
 ?>
 </section>
