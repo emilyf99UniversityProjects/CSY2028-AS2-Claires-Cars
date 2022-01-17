@@ -2,8 +2,8 @@
 require 'leftsectionadmin.html.php';
 ?>
 <section class="right">
-    <h2>Manage Archived Cars</h2>
-    <p><a href ="">Add a Car to the Archive</a></p>
+    <h2>Manage Cars</h2>
+    <p><a href ="">Add a Car</a></p>
 
     <?php
     foreach ($cars as $car) {
@@ -12,8 +12,7 @@ require 'leftsectionadmin.html.php';
             echo '<a href="images/cars/' . $car['id'] . '.jpg"><img src="/images/cars/' . $car['id'] . '.jpg" /></a>';
        }*/ 
 
-       echo'<p>This is where all the held cars are archived.</p>';
-       echo '<p>These cars do not show up in the showroom.</p>';
+       echo'<p>This is where all the cars in the showroom are displayed.</p>';
 		echo '<div class="details">';
 		//echo '<h2>' . $manufacturer['name'] . ' ' . $car['name'] . '</h2>';
 		echo '<h2>' . $car['name'] . '</h2>';
@@ -22,15 +21,15 @@ require 'leftsectionadmin.html.php';
 		echo '<p>' . $car['description'] . '</p>';
 		echo '<p> Mileage : ' . $car['mileage'] . ' miles</p>';
 		echo '<p> Engine Type: ' . $car['engine'] . '</p>';
-        echo '<p><a href = "">Edit the Car in the Archive</a></p>';
-        echo '<p><a href = "">Delete the Car in the Archive (Cannot be undone)</a></p>';
+        echo '<p><a href = "">Edit Car</a></p>';
+        echo '<p><a href = "">Delete Car(Cannot be undone)</a></p>';
 		echo '</div>';
 	 	echo '</li>';
 	 }
 
     if(!$cars) {
     ?>
-    <p>There are currently no Archived Cars in the database, Please Archive a Car.</p>
+    <p>There are currently no Cars in the database, Please add a Car.</p>
     <?php
     }
     ?>
