@@ -37,5 +37,25 @@ namespace load\controllers;
             ];  
         }
     }
+
+    public function manageinquiries() {
+        $inquiries = $this->inquiriesconnect->findAll();
+        if(isset($_SESSION['loggedin'])) {
+            return [
+                'template' => 'manageinquiries.html.php',
+                'variables' => ['inquiries' => $inquiries],
+                'title' => 'Claire\'s Cars - Manage Inquiries',
+                'class' => 'admin'
+            ];
+        }
+        else {
+            return [
+                'template' => 'loginerror.html.php',
+                'variables' => [''],
+                'title' => 'Claire\'s Cars - Login Error',
+                'class' => 'admin'
+            ];
+        }
+    }
 }
 ?>
