@@ -39,10 +39,30 @@ namespace load\controllers;
     }
 
     public function manageinquiries() {
-        $inquiries = $this->inquiriesconnect->findAll();
+        $inquiries = $this->inquiriesconnect->find('completed', 0);
         if(isset($_SESSION['loggedin'])) {
             return [
                 'template' => 'manageinquiries.html.php',
+                'variables' => ['inquiries' => $inquiries],
+                'title' => 'Claire\'s Cars - Manage Inquiries',
+                'class' => 'admin'
+            ];
+        }
+        else {
+            return [
+                'template' => 'loginerror.html.php',
+                'variables' => [''],
+                'title' => 'Claire\'s Cars - Login Error',
+                'class' => 'admin'
+            ];
+        }
+    }
+
+    public function completedinquiries() {
+        $inquiries = $this->inquiriesconnect->find('completed', 1);
+        if(isset($_SESSION['loggedin'])) {
+            return [
+                'template' => 'completedinquiries.html.php',
                 'variables' => ['inquiries' => $inquiries],
                 'title' => 'Claire\'s Cars - Manage Inquiries',
                 'class' => 'admin'
