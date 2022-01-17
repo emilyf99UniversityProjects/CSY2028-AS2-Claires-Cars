@@ -44,7 +44,7 @@ class Cars {
             return [
                 'template' => 'managearchivecars.html.php',
                 'variables' => ['cars' => $cars],
-                'title' => 'Claire\'s Cars - Manage Archived Cars Logins',
+                'title' => 'Claire\'s Cars - Manage Archived Cars',
                 'class' => 'admin'
             ];
         }

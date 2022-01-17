@@ -21,7 +21,6 @@ require 'leftsectionadmin.html.php';
     if(!$admins) {
     ?>
     <p>There are currently no Admins in the database, Please Add a Admin or Contact Support.</p>
-    <p><a href ="">Add a New Admin</a></p>
     <?php
     }
     ?>

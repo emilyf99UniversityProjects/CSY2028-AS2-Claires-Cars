@@ -3,8 +3,6 @@ require 'leftsectionadmin.html.php';
 ?>
 <section class="right">
     <h2>Manage Archived Cars</h2>
-    <p>This is where all the held cars are archived.</p>
-    <p>These cars do not show up in the showroom.</p>
     <p><a href ="">Add a Car to the Archive</a></p>
 
     <?php
@@ -14,6 +12,8 @@ require 'leftsectionadmin.html.php';
             echo '<a href="images/cars/' . $car['id'] . '.jpg"><img src="/images/cars/' . $car['id'] . '.jpg" /></a>';
        }*/ 
 
+       echo'<p>This is where all the held cars are archived.</p>';
+       echo '<p>These cars do not show up in the showroom.</p>';
 		echo '<div class="details">';
 		//echo '<h2>' . $manufacturer['name'] . ' ' . $car['name'] . '</h2>';
 		echo '<h2>' . $car['name'] . '</h2>';
@@ -31,7 +31,6 @@ require 'leftsectionadmin.html.php';
     if(!$cars) {
     ?>
     <p>There are currently no Archived Cars in the database, Please Archive a Car.</p>
-    <p><a href ="">Add a Car to the Archive</a></p>
     <?php
     }
     ?>
