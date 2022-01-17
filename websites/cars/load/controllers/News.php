@@ -16,6 +16,26 @@ namespace load\controllers;
                 'class' => 'home'
             ];
         }
+
+        public function managenews() {
+            $news = $this->newsconnect->findAll();
+            if(isset($_SESSION['loggedin'])) {
+                return [
+                    'template' => 'managenews.html.php',
+                    'variables' => ['news' => $news],
+                    'title' => 'Claire\'s Cars - Manage News',
+                    'class' => 'admin'
+                ];
+            }
+            else {
+                return [
+                    'template' => 'loginerror.html.php',
+                    'variables' => [''],
+                    'title' => 'Claire\'s Cars - Login Error',
+                    'class' => 'admin'
+                ];
+            }
+        }
     }
 
 ?>
