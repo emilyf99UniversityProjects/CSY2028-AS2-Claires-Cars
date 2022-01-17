@@ -3,6 +3,7 @@ require 'leftsectionadmin.html.php';
 ?>
 <section class="right">
     <h2>Manage Cars</h2>
+    <p>This is where all the cars in the showroom are displayed.</p>
     <p><a href ="">Add a Car</a></p>
 
     <?php
@@ -12,7 +13,6 @@ require 'leftsectionadmin.html.php';
             echo '<a href="images/cars/' . $car['id'] . '.jpg"><img src="/images/cars/' . $car['id'] . '.jpg" /></a>';
        }*/ 
 
-       echo'<p>This is where all the cars in the showroom are displayed.</p>';
 		echo '<div class="details">';
 		//echo '<h2>' . $manufacturer['name'] . ' ' . $car['name'] . '</h2>';
 		echo '<h2>' . $car['name'] . '</h2>';

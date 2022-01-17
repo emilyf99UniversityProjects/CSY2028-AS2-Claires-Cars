@@ -3,10 +3,10 @@ require 'leftsectionadmin.html.php';
 ?>
 <section class="right">
     <h2>Manage Inquiries</h2>
+    <p>All the Customer inquiries are listed here.</p>
 
     <?php
     foreach ($inquiries as $inquiry) {
-        echo '<p>All the Customer inquiries are listed here.</p>';
 		echo '<li>';
 	 	echo '<div class="details">';
 		echo '<h4> Customer Name: ' . $inquiry['name'] . '</h4>';

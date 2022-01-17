@@ -3,11 +3,11 @@ require 'leftsectionadmin.html.php';
 ?>
 <section class="right">
     <h2>Manage Careers</h2>
+    <p>All the job listings currently on the ClairesCareers page are shown here.</p>
     <p><a href ="">Add a New Job</a></p>
 
     <?php
     foreach ($jobs as $job) {
-        echo '<p>All the job listings currently on the ClairesCareers page are shown here.</p>';
 		echo '<li>';
 	 	echo '<div class="details">';
 		echo '<h4> Job Title: ' . $job['title'] . '</h4>';
