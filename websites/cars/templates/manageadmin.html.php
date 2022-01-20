@@ -13,7 +13,11 @@ require 'leftsectionadmin.html.php';
 		echo '<h4> Username: ' . $admin['username'] . '</h4>';
 		echo '<h4> Password: ' . $admin['password'] . '</h4>';
         echo '<p><a href ="">Edit This Admin</a></p>';
-        echo '<p><a href ="">Delete This Admin</a></p>';
+        echo '<td><form method = "post" action = "/admins/deleteadmin">
+        <input type = "hidden" name = "id" value = "' . $admin['id'] . '"/>
+        <input type = "submit" name = "submit" value= "Delete Admin" />
+        </form></td>';
+        echo '<tr>';
 		echo '</div>';
 	 	echo '</li>';
 	 }

@@ -96,6 +96,17 @@ namespace load\controllers;
                 ];
             }
         }
+
+        public function deleteadminSubmit() {
+           $admins = $this ->loginconnect->delete($_POST['id']);
+
+            return [
+                'template' => 'delete.html.php',
+                'variables' => ['admins' => $admins],
+                'title' => 'Claire\'s Cars - Deleted Successfully',
+                'class' => 'admin'
+            ];
+        }
         
     }
 ?>

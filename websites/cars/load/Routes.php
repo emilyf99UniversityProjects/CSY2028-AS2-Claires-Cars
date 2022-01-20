@@ -28,6 +28,7 @@
     	return 'news/news';
 	}
 
+	//have to be an admin to be logged in 
  	public function checkLogin($route) {
  	session_start();
  	$loginRoutes = [];
