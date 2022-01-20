@@ -13,8 +13,8 @@ require 'leftsectionadmin.html.php';
 		echo '<p> Customer Email: ' . $inquiry['email'] . '</p>';
         echo '<p> Customer Telephone: ' . $inquiry['telephone'] . '</p>';
         echo '<p> Inquiry: ' . $inquiry['inquiry'] . '</p>';
-        echo '<p> Date Completed: ' . $inquiry['datecompleted'] . '</p>';
-        echo '<p> Completed By: ' . $inquiry['completedby'] . '</p>';
+        echo '<p> Complete Date : ' . $inquiry['completeddate'] . '</p>';
+        echo '<p> Complete By : ' . $inquiry['completedby'] . '</p>';
 		echo '</div>';
 	 	echo '</li>';
 	 }

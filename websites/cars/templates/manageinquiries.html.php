@@ -13,6 +13,7 @@ require 'leftsectionadmin.html.php';
 		echo '<p> Customer Email: ' . $inquiry['email'] . '</p>';
         echo '<p> Customer Telephone: ' . $inquiry['telephone'] . '</p>';
         echo '<p> Inquiry: ' . $inquiry['inquiry'] . '</p>';
+        echo '<p> Complete: ' . $inquiry['completed'] . '</p>';
         echo '<p><a href ="">Complete This Inquiry</a></p>';
 		echo '</div>';
 	 	echo '</li>';
