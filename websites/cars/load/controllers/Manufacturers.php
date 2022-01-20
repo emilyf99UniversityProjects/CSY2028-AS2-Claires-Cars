@@ -26,5 +26,18 @@ class Manufacturers {
             ];
         }
     }
+
+    public function deletemanufacturerSubmit() {
+        $manufacturers = $this ->manufacturerconnect->delete($_POST['id']);
+     
+        return [
+            'template' => 'delete.html.php',
+            'variables' => ['manufacturers' => $manufacturers],
+            'title' => 'Claire\'s Cars - Deleted Successfully',
+            'class' => 'admin'
+
+        ];
+        
+    }
 }
 ?>
