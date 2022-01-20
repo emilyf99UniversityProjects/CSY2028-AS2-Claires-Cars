@@ -15,8 +15,12 @@ require 'leftsectionadmin.html.php';
         echo '<h4>Content: ' . $newsarticle['content'] . '</h4>';
         echo '<h4>Date Posted: ' . $newsarticle['dateposted'] . '</h4>';
         echo '<h4>Author: ' . $newsarticle['author'] . '</h4>';
-        echo '<p><a href ="">Edit this Article</a></p>';
         echo '<p><a href ="">Delete this Article (cannot be undone)</a></p>';
+        echo '<p><a href = "">Edit Car</a></p>';
+        echo '<td><form method = "post" action = "/news/deletenewsarticle">
+        <input type = "hidden" name = "id" value = "' . $newsarticle['id'] . '"/>
+        <input type = "submit" name = "submit" value= "Delete this Article" />
+        </form></td>';
 		echo '</div>';
 	 	echo '</li>';
 	 }

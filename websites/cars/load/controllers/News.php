@@ -36,6 +36,18 @@ namespace load\controllers;
                 ];
             }
         }
+
+        public function deletenewsarticleSubmit() {
+            $news = $this ->newsconnect->delete($_POST['id']);
+     
+            return [
+                'template' => 'delete.html.php',
+                'variables' => ['news' => $news],
+                'title' => 'Claire\'s Cars - Deleted Successfully',
+                'class' => 'admin'
+            ];
+        
+        }
     }
 
 ?>

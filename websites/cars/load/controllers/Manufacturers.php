@@ -35,7 +35,6 @@ class Manufacturers {
             'variables' => ['manufacturers' => $manufacturers],
             'title' => 'Claire\'s Cars - Deleted Successfully',
             'class' => 'admin'
-
         ];
         
     }
