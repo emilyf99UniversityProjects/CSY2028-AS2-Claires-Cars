@@ -15,7 +15,10 @@ require 'leftsectionadmin.html.php';
         echo '<p> Salary: ' . $job['salary'] . '</p>';
         echo '<p> Qualifications: ' . $job['qualifications'] . '</p>';
         echo '<p><a href ="">Edit This Job</a></p>';
-        echo '<p><a href ="">Delete This Job (Cannot be undone)</a></p>';
+        echo '<td><form method = "post" action = "/jobs/deletejobposting">
+        <input type = "hidden" name = "id" value = "' . $job['id'] . '"/>
+        <input type = "submit" name = "submit" value= "Delete This Job Post" />
+        </form></td>';
 		echo '</div>';
 	 	echo '</li>';
 	 }

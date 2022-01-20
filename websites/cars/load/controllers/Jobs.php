@@ -36,5 +36,16 @@ namespace load\controllers;
             ];
         }
     }
+
+    public function deletejobpostingSubmit() {
+        $jobs = $this ->jobconnect->delete($_POST['id']);
+
+        return [
+            'template' => 'delete.html.php',
+            'variables' => ['jobs' => $jobs],
+            'title' => 'Claire\'s Cars - Deleted Successfully',
+            'class' => 'admin'
+        ];
+    }
 }
 ?>
