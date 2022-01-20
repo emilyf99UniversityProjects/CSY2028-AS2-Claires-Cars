@@ -36,19 +36,18 @@
  	$loginRoutes['manufacturers/editManufacturer'] = true;
  	$loginRoutes['manufacturers/deleteManufacturer'] = true;
 
- 	$loginRoutes['cars/cars'] = true;
  	$loginRoutes['cars/editCars'] = true;
  	$loginRoutes['cars/deleteCars'] = true;
 
 	 //add careers ones
 	 //add news ones
 	
- 	$requiresLogin = $loginRoutes[$route] ?? false;
+	 $requiresLogin = $loginRoutes[$route] ?? false;
 
  		if ($requiresLogin && !isset($_SESSION['loggedin'])) {
-    		header('location: /Admins/login');
+    		header('location: /admins/login');
     		exit();  
  		} 
- 	} 
+ 	}
 } 
 ?>
