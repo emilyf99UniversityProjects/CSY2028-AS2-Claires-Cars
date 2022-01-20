@@ -78,7 +78,7 @@ class Cars {
         }
     }
 
-    public function deletearchivedcarSubmit() {
+    public function deletecarSubmit() {
         $cars = $this ->carsconnect->delete($_POST['id']);
  
         return [
