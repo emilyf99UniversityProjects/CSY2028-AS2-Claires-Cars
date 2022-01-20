@@ -78,7 +78,19 @@ class Cars {
         }
     }
 
+    public function deletearchivedcarSubmit() {
+        $cars = $this ->carsconnect->delete($_POST['id']);
+ 
+        return [
+            'template' => 'delete.html.php',
+            'variables' => ['cars' => $cars],
+            'title' => 'Claire\'s Cars - Deleted Successfully',
+            'class' => 'admin'
+        ];
+    
+    }
+
 }
 
 
-?>
+?> 
