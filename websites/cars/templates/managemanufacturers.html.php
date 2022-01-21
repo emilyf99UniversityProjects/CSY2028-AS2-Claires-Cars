@@ -11,9 +11,9 @@ require 'leftsectionadmin.html.php';
 		echo '<li>';
 	 	echo '<div class="details">';
 		echo '<h4>Name: ' . $manufacturer['name'] . '</h4>';
-        echo '<p><a href ="/manufacturers/editaddmanufacturer?id=' . $manufacturer['id'] . ' "> Edit this Manufacturer</a></p>';
+        echo '<p><a href ="/manufacturers/editaddmanufacturer?id=' .$manufacturer['id'] .'"> Edit this Manufacturer</a></p>';
         echo '<td><form method = "post" action = "/manufacturers/deletemanufacturer">
-        <input type = "hidden" name = "id" value = "' . $manufacturer['id'] . '"/>
+        <input type = "hidden" name = "id" value = "'.$manufacturer['id'].'"/>
         <input type = "submit" name = "submit" value= "Delete Manufacturer" />
         </form></td>';
 		echo '</div>';

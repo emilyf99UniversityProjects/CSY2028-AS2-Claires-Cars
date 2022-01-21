@@ -24,7 +24,7 @@ require 'leftsectionadmin.html.php';
 		echo '<p> Engine Type: ' . $car['engine'] . '</p>';
         echo '<p><a href = "">Edit the Car in the Archive</a></p>';
         echo '<td><form method = "post" action = "/cars/deletecar">
-        <input type = "hidden" name = "id" value = "' . $car['id'] . '"/>
+        <input type = "hidden" name = "id" value = "'.$car['id'].'"/>
         <input type = "submit" name = "submit" value= "Delete Archived Car" />
         </form></td>';
 		echo '</div>';

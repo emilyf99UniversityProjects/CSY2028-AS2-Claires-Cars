@@ -65,10 +65,10 @@ class Manufacturers {
         }
 
         return [
-            'template' => 'editadd.html.php',
+            'template' => 'editaddmanufacturer.html.php',
             'variables' => ['manufacturers' => $manufacturers],
             'title' => 'Claire\'s Cars - Edit and Add Manufacturers',
-            'class' => 'admin'
+            'class' => 'admin';
         ];
     }
 }
