@@ -1,14 +1,14 @@
 <?php
 namespace load\controllers;
 class Manufacturers {
-    private $manufacturerconnect;
+    private $manufacturersconnect;
 
-    public function __construct($manufacturerconnect) {
-    $this-> manufacturerconnect = $manufacturerconnect;
+    public function __construct($manufacturersconnect) {
+    $this-> manufacturersconnect = $manufacturersconnect;
     }
 
     public function managemanufacturers() {
-        $manufacturers = $this->manufacturerconnect->findAll();
+        $manufacturers = $this->manufacturersconnect->findAll();
         if(isset($_SESSION['loggedin'])) {
             return [
                 'template' => 'managemanufacturers.html.php',
@@ -28,7 +28,7 @@ class Manufacturers {
     }
 
     public function deletemanufacturerSubmit() {
-        $manufacturers = $this ->manufacturerconnect->delete($_POST['id']);
+        $manufacturers = $this ->manufacturersconnect->delete($_POST['id']);
      
         return [
             'template' => 'delete.html.php',
@@ -37,6 +37,39 @@ class Manufacturers {
             'class' => 'admin'
         ];
         
+    }
+
+    public function editaddmanufacturerSubmit() {
+
+        if(isset($_POST['submit'])) {
+            $manufacturers = $_POST['manufacturers'];
+            
+            if ($manufacturers['id'] == '') {
+                $manufacturers['id'] = null;
+            }
+
+            $this->manufacturersconnect->save($manufacturers);
+
+        }
+    }
+
+    public function editaddmanufacturer() {
+        if(isset($_GET['id'])) {
+            $find = $this->manufacturersconnect->find('id', $_GET['id']);
+
+            $manufacturers = $find[0];
+        }
+
+        else {
+            $manufacturers = false;
+        }
+
+        return [
+            'template' => 'editadd.html.php',
+            'variables' => ['manufacturers' => $manufacturers],
+            'title' => 'Claire\'s Cars - Edit and Add Manufacturers',
+            'class' => 'admin'
+        ];
     }
 }
 ?>
