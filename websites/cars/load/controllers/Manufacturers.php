@@ -49,6 +49,12 @@ class Manufacturers {
             }
 
             $this->manufacturersconnect->save($manufacturers);
+            return [
+                'template' => 'editaddmanufacturer.html.php',
+                'variables' => ['manufacturers' => $manufacturers],
+                'title' => 'Claire\'s Cars - Edit and Add Manufacturers',
+                'class' => 'admin'
+            ];
 
         }
     }
@@ -68,7 +74,7 @@ class Manufacturers {
             'template' => 'editaddmanufacturer.html.php',
             'variables' => ['manufacturers' => $manufacturers],
             'title' => 'Claire\'s Cars - Edit and Add Manufacturers',
-            'class' => 'admin';
+            'class' => 'admin'
         ];
     }
 }
