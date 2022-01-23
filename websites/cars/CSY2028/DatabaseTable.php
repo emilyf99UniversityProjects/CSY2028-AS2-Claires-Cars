@@ -21,10 +21,10 @@ class DatabaseTable {
     public function insert($record) {
         $keys = array_keys($record);
 
-        $values = implode(', ', $keys);
-        $valuesWithColon = implode(', :', $keys);
+        $values = implode(',', $keys);
+        $valuesWithColon = implode(',:', $keys);
 
-        $query = 'INSERT INTO ' . $this->table . ' (' . $values . ') VALUES (:' . $valuesWithColon . ')';
+        $query = 'INSERT INTO ' . $this->table . '('. $values .') VALUES (:'. $valuesWithColon .')';
 
         $stmt = $this->pdo->prepare($query);
 
@@ -70,7 +70,7 @@ class DatabaseTable {
 	                $parameters[] = $key . ' = :' .$key;
 	         	}
 
-	         $query .= implode(', ', $parameters);
+	         $query .= implode(',', $parameters);
 	         $query .= ' WHERE ' . $this->primaryKey . ' = :primaryKey';
 
 	         $record['primaryKey'] = $record[$this->primaryKey];
