@@ -35,7 +35,7 @@ class Cars {
             'template' => 'cars.html.php',
             'variables' => ['cars' => $cars], 
             'title' => 'Claires\'s Cars - Our Cars',
-            'class' => 'home'
+            'class' => 'admin'
             ];
     }
 

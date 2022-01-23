@@ -7,12 +7,6 @@
 	<ul class = "cars">
 <?php
 
-	/*$cars = $pdo->prepare('SELECT * FROM cars LIMIT 10');
-	 $manufacturer = $pdo->prepare('SELECT * FROM manufacturers WHERE id = :id');
-
-	 $cars->execute();*/
-
-
 	foreach ($cars as $car) {
 		//$manu->execute(['id' => $car['manufacturerId']]);
 		//$manufacturer = $manu->fetch();
