@@ -19,7 +19,9 @@
 	 	echo '<div class="details">';
 		//echo '<h2>' . $manufacturer['name'] . ' ' . $car['name'] . '</h2>';
 		echo '<h2>' . $car['name'] . '</h2>';
-		echo '<h3>Before Price: £' . $car['beforeprice'] . '</h3>';
+		if($car['beforeprice'] == !null) {
+			echo '<h3>Before Price: £' . $car['beforeprice'] . '</h3>';
+		}
 		echo '<h3>Current Price: £' . $car['price'] . '</h3>';
 		echo '<p>' . $car['description'] . '</p>';
 		echo '<p> Mileage : ' . $car['mileage'] . ' miles</p>';
