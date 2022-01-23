@@ -5,7 +5,7 @@ require 'leftsectionadmin.html.php';
     <h2>Manage Archived Cars</h2>
     <p>This is where all the held cars are archived.</p>
     <p>These cars do not show up in the showroom.</p>
-    <p><a href ="">Add a Car to the Archive</a></p>
+    <p><a href ="/cars/editaddcars">Add a Car to the Archive</a></p>
 
     <?php
     foreach ($cars as $car) {
@@ -22,7 +22,7 @@ require 'leftsectionadmin.html.php';
 		echo '<p>' . $car['description'] . '</p>';
 		echo '<p> Mileage : ' . $car['mileage'] . ' miles</p>';
 		echo '<p> Engine Type: ' . $car['engine'] . '</p>';
-        echo '<p><a href = "">Edit the Car in the Archive</a></p>';
+        echo '<p><a href = "/cars/editaddcars?id=' .$car['id'] .'">Edit the Car in the Archive</a></p>';
         echo '<td><form method = "post" action = "/cars/deletecar">
         <input type = "hidden" name = "id" value = "'.$car['id'].'"/>
         <input type = "submit" name = "submit" value= "Delete Archived Car" />

@@ -4,7 +4,7 @@ require 'leftsectionadmin.html.php';
 <section class="right">
     <h2>Manage Cars</h2>
     <p>This is where all the cars in the showroom are displayed.</p>
-    <p><a href ="">Add a Car</a></p>
+    <p><a href ="/cars/editaddcars">Add a Car</a></p>
 
     <?php
     foreach ($cars as $car) {
@@ -21,7 +21,7 @@ require 'leftsectionadmin.html.php';
 		echo '<p>' . $car['description'] . '</p>';
 		echo '<p> Mileage : ' . $car['mileage'] . ' miles</p>';
 		echo '<p> Engine Type: ' . $car['engine'] . '</p>';
-        echo '<p><a href = "">Edit Car</a></p>';
+        echo '<p><a href = "/cars/editaddcars?id=' .$car['id'] . '">Edit Car</a></p>';
         echo '<td><form method = "post" action = "/cars/deletecar">
         <input type = "hidden" name = "id" value = "' . $car['id'] . '"/>
         <input type = "submit" name = "submit" value= "Delete Car" />

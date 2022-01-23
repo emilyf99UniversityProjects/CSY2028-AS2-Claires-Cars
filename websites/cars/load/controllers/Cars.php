@@ -91,6 +91,45 @@ class Cars {
     
     }
 
+    public function editaddcarsSubmit() {
+
+        if(isset($_POST['submit'])) {
+            $cars = $_POST['cars'];
+            
+            if ($cars['id'] == '') {
+                $cars['id'] = null;
+            }
+
+            $this->carsconnect->save($cars);
+            return [
+                'template' => 'editaddcars.html.php',
+                'variables' => ['cars' => $cars],
+                'title' => 'Claire\'s Cars - Edit and Add Cars',
+                'class' => 'admin'
+            ];
+
+        }
+    }
+
+    public function editaddcars() {
+        if(isset($_GET['id'])) {
+            $find = $this->carsconnect->find('id', $_GET['id']);
+
+            $cars = $find[0];
+        }
+
+        else {
+            $cars = false;
+        }
+
+        return [
+            'template' => 'editaddcars.html.php',
+            'variables' => ['cars' => $cars],
+            'title' => 'Claire\'s Cars - Edit and Add Cars',
+            'class' => 'admin'
+        ];
+    }
+
 }
 
 
