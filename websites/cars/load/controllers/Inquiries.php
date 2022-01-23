@@ -18,24 +18,17 @@ namespace load\controllers;
     }
 
     public function contactSubmit() {
-        $inquiries = $_POST['inquiries'];
-        $this->inquiriesconnect->save($inquiries);
-        if(isset($_POST['formsubmit'])) {
-           // $record = //;
-            $values = [
-                'name' => $_POST['name'],
-                'email' => $_POST['email'],
-                'telephone' => $_POST['telephone'],
-                'inquiry' => $_POST['inquiry']
-                ];  
-        }
-        else {
+
+        if(isset($_POST['submit'])) {
+            $inquiries = $_POST['inquiries'];
+
+            $inquiries = $this->inquiriesconnect->save($inquiries);
             return [
                 'template' => 'contact.html.php',
-                'variables' => ['inquiries' => $inquiries], 
-                'title' => 'Claires\'s Cars - Contact Us',
+                'variables' => ['inquiries' => $inquiries],
+                'title' => 'Claire\'s Cars - Inquiries',
                 'class' => 'contact'
-            ];  
+            ];
         }
     }
 

@@ -30,6 +30,7 @@ class Cars {
 
     public function cars() {
         $cars = $this->carsconnect->find('archived', 0);
+        //$pagination = $this ->carsconnect->pagination();
         return [
             'template' => 'cars.html.php',
             'variables' => ['cars' => $cars], 

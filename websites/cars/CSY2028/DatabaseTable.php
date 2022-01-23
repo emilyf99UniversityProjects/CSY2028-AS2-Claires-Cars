@@ -80,4 +80,30 @@ class DatabaseTable {
 	         $stmt->execute($record);
 	}
 
-} 
+	public function pagination() {
+		$recordsOnPage = 5; 
+		$totalRecords = $this->pdo->prepare('SELECT COUNT(*) FROM ' . $this->table);
+		$totalRecords->execute();
+		$numberOfPage = CEIL($totalRecords / $recordsOnPage);
+
+		//$stmt = $this->pdo->prepare('SELECT * FROM ' . $this->table);
+		//$stmt->execute();
+
+		if (!isset ($_GET['page']) ) {  
+			$page = 1;  
+		} else {  
+			$page = $_GET['page'];  
+		}  
+
+		$limit = ($page-1) * $recordsOnPage; 
+		
+		$stmt = $this->pdo->prepare('SELECT * FROM ' . $this->table . ' ORDER BY id ' . 'LIMIT '. $limit . ',' . $recordsOnPage);
+		$stmt->execute();
+
+		//move this out into controller?
+		for($page = 1; $page<= $numberOfPage; $page++) {  
+			echo '<a href = "index2.php?page=' . $page . '">' . $page . ' </a>';  
+		}
+	}
+}
+

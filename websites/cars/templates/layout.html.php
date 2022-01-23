@@ -36,7 +36,10 @@
 
 	<img src="/images/randombanner.php"/>
 	<main class = "<?php echo $class;?> ">
-    	<?php echo $content; ?>
+    	<?php 
+		echo $content; 
+		?>
+		
 	</main>
 
 	<footer>
