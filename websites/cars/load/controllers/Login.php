@@ -107,6 +107,43 @@ namespace load\controllers;
                 'class' => 'admin'
             ];
         }
-        
+        public function editaddadminSubmit() {
+
+            if(isset($_POST['submit'])) {
+                $admins = $_POST['admins'];
+                
+                if ($admins['id'] == '') {
+                    $admins['id'] = null;
+                }
+    
+                $this->loginconnect->save($admins);
+                return [
+                    'template' => 'editaddadmin.html.php',
+                    'variables' => ['admins' => $admins],
+                    'title' => 'Claire\'s Cars - Edit and Add Admins',
+                    'class' => 'admin'
+                ];
+    
+            }
+        }
+    
+        public function editaddadmin() {
+            if(isset($_GET['id'])) {
+                $find = $this->loginconnect->find('id', $_GET['id']);
+    
+                $admins = $find[0];
+            }
+    
+            else {
+                $admins = false;
+            }
+    
+            return [
+                'template' => 'editaddadmin.html.php',
+                'variables' => ['admins' => $admins],
+                'title' => 'Claire\'s Cars - Edit and Add Admins',
+                'class' => 'admin'
+            ];
+        }
     }
 ?>
