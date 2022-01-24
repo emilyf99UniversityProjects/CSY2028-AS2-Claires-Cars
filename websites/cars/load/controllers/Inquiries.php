@@ -19,10 +19,16 @@ namespace load\controllers;
 
     public function contactSubmit() {
 
-        if(isset($_POST['submit'])) {
+        if(isset($_POST['inquiries'])) {
+
             $inquiries = $_POST['inquiries'];
 
-            $inquiries = $this->inquiriesconnect->save($inquiries);
+            if ($inquiries['id'] == '') {
+                $inquiries['id'] = null;
+            }
+
+            $this->inquiriesconnect->save($inquiries);
+
             return [
                 'template' => 'contact.html.php',
                 'variables' => ['inquiries' => $inquiries],

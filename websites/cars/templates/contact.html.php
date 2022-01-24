@@ -8,10 +8,7 @@
     <label>Email: </label> <input type="text" name = "inquiries[email]" value=" <?=$inquiries['email'] ?? ''?>"required />
 	<label>Telephone: </label> <input type="text" name = "inquiries[telephone]" value=" <?=$inquiries['telephone'] ?? ''?>" required/>
 	<label>Inquiry: </label> <textarea name = "inquiries[inquiry]" value=" <?=$inquiries['inquiry'] ?? ''?>" required> </textarea>
-    <input type= "hidden" name= "inquiries[completed]" value="<?=$inquiries['completed'] ?? ''?>"/>
-    <input type= "hidden" name= "inquiries[completeddate]" value="<?=$inquiries['completeddate'] ?? ''?>"/>
-    <input type= "hidden" name= "inquiries[completedby]" value="<?=$inquiries['completedby'] ?? ''?>"/>
 
-    <input type= "submit" name = "contact" value = "Save" />
+    <input type= "submit" name = "submit" value = "Save" />
     
 </form>

@@ -10,6 +10,7 @@
 	foreach ($cars as $car) {
 		//$manu->execute(['id' => $car['manufacturerId']]);
 		//$manufacturer = $manu->fetch();
+		echo '<table>';
 		echo '<li>';
 
 	if (file_exists('images/cars/' . $car['id'] . '.jpg')) {
@@ -29,6 +30,7 @@
 
 		echo '</div>';
 	 	echo '</li>';
+		echo '<table>';
 	 }
 	?>
 	</ul>
