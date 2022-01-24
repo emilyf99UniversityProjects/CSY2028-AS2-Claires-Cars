@@ -8,20 +8,24 @@ require 'leftsectionadmin.html.php';
 
     <?php
     foreach ($news as $newsarticle) {
+        echo '<table>';
 		echo '<li>';
-	 	echo '<div class="details">';
+        echo '<tr>';
+	 	echo '<td><div class="details">';
 		echo '<h4>Title: ' . $newsarticle['title'] . '</h4>';
         //add thumbnail image
         echo '<h4>Content: ' . $newsarticle['content'] . '</h4>';
         echo '<h4>Date Posted: ' . $newsarticle['dateposted'] . '</h4>';
-        echo '<h4>Author: ' . $newsarticle['author'] . '</h4>';
-        echo '<p><a href = "/news/editaddnews?id=' .$newsarticle['id'] . '">Edit News Article</a></p>';
-        echo '<form method = "post" action = "/news/deletenewsarticle">
+        echo '<h4>Author: ' . $newsarticle['author'] . '</h4></td>';
+        echo '<td><p><a href = "/news/editaddnews?id=' .$newsarticle['id'] . '">Edit News Article</a></p></td>';
+        echo '<td><form method = "post" action = "/news/deletenewsarticle">
         <input type = "hidden" name = "id" value = "' . $newsarticle['id'] . '"/>
         <input type = "submit" name = "submit" value= "Delete this Article" />
-        </form>';
+        </form></td>';
 		echo '</div>';
+        echo '</tr>';
 	 	echo '</li>';
+        echo '</table>';
 	 }
 
     if(!$news) {
