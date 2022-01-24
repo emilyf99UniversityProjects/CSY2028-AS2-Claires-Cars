@@ -3,7 +3,7 @@ require 'leftsectionadmin.html.php';
 ?>
 
 <section class = "right">
-    <h2> Update or Add a Cars</h2>
+    <h2> Update or Add a Car</h2>
 
     <form action=" " method="POST">
         <input type= "hidden" name= "cars[id]" value="<?=$cars['id'] ?? ''?>"/>

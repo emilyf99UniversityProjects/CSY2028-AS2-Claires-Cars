@@ -71,5 +71,44 @@ namespace load\controllers;
             ];
         }
     }
+
+    public function completeinquiriesSubmit() {
+
+        if(isset($_POST['submit'])) {
+            $inquiries = $_POST['inquiries'];
+            
+            if ($inquiries['id'] == '') {
+                $inquiries['id'] = null;
+            }
+
+            $this->inquiriesconnect->save($inquiries);
+            return [
+                'template' => 'completeinquiries.html.php',
+                'variables' => ['inquiries' => $inquiries],
+                'title' => 'Claire\'s Cars - Edit and Add Inquiry',
+                'class' => 'admin'
+            ];
+
+        }
+    }
+
+    public function completeinquiries() {
+        if(isset($_GET['id'])) {
+            $find = $this->inquiriesconnect->find('id', $_GET['id']);
+
+            $inquiries = $find[0];
+        }
+
+        else {
+            $inquiries = false;
+        }
+
+        return [
+            'template' => 'completeinquiries.html.php',
+            'variables' => ['inquiries' => $inquiries],
+            'title' => 'Claire\'s Cars - Edit and Add Inquiry',
+            'class' => 'admin'
+        ];
+    }
 }
 ?>
