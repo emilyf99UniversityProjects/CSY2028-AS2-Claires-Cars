@@ -10,6 +10,7 @@ require 'leftsectionadmin.html.php';
     foreach ($jobs as $job) {
         echo '<table>';
 		echo '<li>';
+        echo '<tr>';
 	 	echo '<div class="details">';
 		echo '<td><h4> Job Title: ' . $job['title'] . '</h4></td>';
 		echo '<td><p> Job Description: ' . $job['description'] . '</p></td>';
@@ -21,6 +22,7 @@ require 'leftsectionadmin.html.php';
         <input type = "submit" name = "submit" value= "Delete This Job Post" />
         </form></td>';
 		echo '</div>';
+        echo '</tr>';
 	 	echo '</li>';
         echo '</table>';
 	 }

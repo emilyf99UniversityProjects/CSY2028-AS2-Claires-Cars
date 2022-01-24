@@ -8,18 +8,21 @@ require 'leftsectionadmin.html.php';
 
     <?php
     foreach ($admins as $admin) {
+        echo '<table>';
 		echo '<li>';
+        echo '<tr>';
 	 	echo '<div class="details">';
-		echo '<h4> Username: ' . $admin['username'] . '</h4>';
-		echo '<h4> Password: ' . $admin['password'] . '</h4>';
-        echo '<p><a href ="/admins/editaddadmin?id=' .$admin['id'] .'">Edit This Admin</a></p>';
+		echo '<td><h4> Username: ' . $admin['username'] . '</h4></td>';
+		echo '<td><h4> Password: ' . $admin['password'] . '</h4></td>';
+        echo '<td><p><a href ="/admins/editaddadmin?id=' .$admin['id'] .'">Edit This Admin</a></p></td>';
         echo '<td><form method = "post" action = "/admins/deleteadmin">
         <input type = "hidden" name = "id" value = "' . $admin['id'] . '"/>
         <input type = "submit" name = "submit" value= "Delete Admin" />
         </form></td>';
-        echo '<tr>';
+        echo '</tr>';
 		echo '</div>';
 	 	echo '</li>';
+        echo '</table>';
 	 }
 
     if(!$admins) {
