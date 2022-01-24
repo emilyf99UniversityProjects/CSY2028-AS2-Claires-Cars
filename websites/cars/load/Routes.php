@@ -7,16 +7,16 @@
 
 			$carsconnect = new \CSY2028\DatabaseTable($pdo, 'cars', 'id');
 			$inquiriesconnect = new \CSY2028\DatabaseTable($pdo, 'inquiries', 'id');
-			$jobconnect = new \CSY2028\DatabaseTable($pdo, 'jobs', 'id');
-			$adminconnect = new \CSY2028\DatabaseTable($pdo, 'admins', 'id');
+			$jobsconnect = new \CSY2028\DatabaseTable($pdo, 'jobs', 'id');
+			$adminsconnect = new \CSY2028\DatabaseTable($pdo, 'admins', 'id');
 			$newsconnect = new \CSY2028\DatabaseTable($pdo, 'news', 'id');
 			$manufacturersconnect = new \CSY2028\DatabaseTable($pdo, 'manufacturers', 'id');
 		
 			$controllers = [];
 			$controllers['cars'] = new \load\controllers\Cars($carsconnect);
 			$controllers['inquiries'] = new \load\controllers\Inquiries($inquiriesconnect);
-			$controllers['jobs'] = new \load\controllers\Jobs($jobconnect);
-			$controllers['admins'] = new \load\controllers\Login($adminconnect);
+			$controllers['jobs'] = new \load\controllers\Jobs($jobsconnect);
+			$controllers['admins'] = new \load\controllers\Login($adminsconnect);
 			$controllers['news'] = new \load\controllers\News($newsconnect);
 			$controllers['manufacturers'] = new \load\controllers\Manufacturers($manufacturersconnect);
 			

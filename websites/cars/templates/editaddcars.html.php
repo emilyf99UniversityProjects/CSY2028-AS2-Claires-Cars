@@ -10,7 +10,7 @@ require 'leftsectionadmin.html.php';
         <label>Name: </label><input type = "text" name="cars[name]" value=" <?=$cars['name'] ?? ''?>"/>
         <!--<label><Manufacturer:-->
         <label>Price: </label><input type = "text" name="cars[price]" value=" <?=$cars['price'] ?? ''?>"/>
-        <label>Description: </label><input type = "textarea" name="cars[description]" value=" <?=$cars['description'] ?? ''?>"/>
+        <label>Description: </label><input type = "text" name="cars[description]" value=" <?=$cars['description'] ?? ''?>"/>
         <label>Before Price: </label><input type = "text" name="cars[beforeprice]" value=" <?=$cars['beforeprice'] ?? ''?>"/>
         <label>Mileage: </label><input type = "text" name="cars[mileage]" value=" <?=$cars['mileage'] ?? ''?>"/>
         <label>Engine: </label><input type = "text" name="cars[engine]" value=" <?=$cars['engine'] ?? ''?>"/>
