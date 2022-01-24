@@ -12,8 +12,8 @@ require 'leftsectionadmin.html.php';
 		echo '<li>';
         echo '<tr>';
 	 	echo '<div class="details">';
-		echo '<td><h4> Username: ' . $admin['username'] . '</h4></td>';
-		echo '<td><h4> Password: ' . $admin['password'] . '</h4></td>';
+		echo '<h4> Username: ' . $admin['username'] . '</h4>';
+		echo '<h4> Password: ' . $admin['password'] . '</h4>';
         echo '<td><p><a href ="/admins/editaddadmin?id=' .$admin['id'] .'">Edit This Admin</a></p></td>';
         echo '<td><form method = "post" action = "/admins/deleteadmin">
         <input type = "hidden" name = "id" value = "' . $admin['id'] . '"/>

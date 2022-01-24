@@ -12,10 +12,10 @@ require 'leftsectionadmin.html.php';
 		echo '<li>';
         echo '<tr>';
 	 	echo '<div class="details">';
-		echo '<td><h4> Job Title: ' . $job['title'] . '</h4></td>';
-		echo '<td><p> Job Description: ' . $job['description'] . '</p></td>';
-        echo '<td><p> Salary: ' . $job['salary'] . '</p></td>';
-        echo '<td><p> Qualifications: ' . $job['qualifications'] . '</p></td>';
+		echo '<h4> Job Title: ' . $job['title'] . '</h4>';
+		echo '<p> Job Description: ' . $job['description'] . '</p>';
+        echo '<p> Salary: ' . $job['salary'] . '</p></td>';
+        echo '<p> Qualifications: ' . $job['qualifications'] . '</p>';
         echo '<td><p><a href ="/jobs/editaddjobs?id=' .$job['id'] . '">Edit This Job</a></p></td>';
         echo '<td><form method = "post" action = "/jobs/deletejobposting">
         <input type = "hidden" name = "id" value = "' . $job['id'] . '"/>
