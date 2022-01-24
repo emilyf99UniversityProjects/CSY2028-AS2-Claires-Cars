@@ -48,6 +48,45 @@ namespace load\controllers;
             ];
         
         }
+
+        public function editaddnewsSubmit() {
+
+            if(isset($_POST['submit'])) {
+                $news = $_POST['news'];
+                
+                if ($news['id'] == '') {
+                    $news['id'] = null;
+                }
+    
+                $this->newsconnect->save($news);
+                return [
+                    'template' => 'editaddnews.html.php',
+                    'variables' => ['news' => $news],
+                    'title' => 'Claire\'s Cars - Edit and Add News',
+                    'class' => 'admin'
+                ];
+    
+            }
+        }
+    
+        public function editaddnews() {
+            if(isset($_GET['id'])) {
+                $find = $this->newsconnect->find('id', $_GET['id']);
+    
+                $news = $find[0];
+            }
+    
+            else {
+                $news = false;
+            }
+    
+            return [
+                'template' => 'editaddnews.html.php',
+                'variables' => ['news' => $news],
+                'title' => 'Claire\'s Cars - Edit and Add News',
+                'class' => 'admin'
+            ];
+        }
     }
 
 ?>
