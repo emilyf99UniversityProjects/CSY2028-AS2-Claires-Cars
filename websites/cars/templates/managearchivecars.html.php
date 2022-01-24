@@ -21,7 +21,7 @@ require 'leftsectionadmin.html.php';
 		echo '<h2>' . $car['name'] . '</h2>';
 
         if($car['beforeprice'] == !null) {
-			echo '<td><h3>Before Price: £' . $car['beforeprice'] . '</h3>';
+			echo '<h3>Before Price: £' . $car['beforeprice'] . '</h3>';
 		}
 
 		echo '<h3>Current Price: £' . $car['price'] . '</h3>';
