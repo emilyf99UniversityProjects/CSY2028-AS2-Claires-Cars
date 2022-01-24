@@ -16,7 +16,7 @@ require 'leftsectionadmin.html.php';
         echo '<table>';
         echo '<li>';
         echo '<tr>';
-		echo '<div class="details">';
+		echo '<td><div class="details">';
 		//echo '<h2>' . $manufacturer['name'] . ' ' . $car['name'] . '</h2>';
 		echo '<h2>' . $car['name'] . '</h2>';
 
@@ -27,7 +27,7 @@ require 'leftsectionadmin.html.php';
 		echo '<h3>Current Price: £' . $car['price'] . '</h3>';
 		echo '<p>' . $car['description'] . '</p>';
 		echo '<p> Mileage : ' . $car['mileage'] . ' miles</p>';
-		echo '<p> Engine Type: ' . $car['engine'] . '</p>';
+		echo '<p> Engine Type: ' . $car['engine'] . '</p></td>';
         echo '<td><p><a href = "/cars/editaddcars?id=' .$car['id'] .'">Edit the Car in the Archive</a></p></td>';
         echo '<td><form method = "post" action = "/cars/deletecar">
         <input type = "hidden" name = "id" value = "'.$car['id'].'"/>

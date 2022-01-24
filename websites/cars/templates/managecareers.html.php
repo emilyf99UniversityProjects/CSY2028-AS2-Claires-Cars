@@ -11,11 +11,11 @@ require 'leftsectionadmin.html.php';
         echo '<table>';
 		echo '<li>';
         echo '<tr>';
-	 	echo '<div class="details">';
+	 	echo '<td><div class="details">';
 		echo '<h4> Job Title: ' . $job['title'] . '</h4>';
 		echo '<p> Job Description: ' . $job['description'] . '</p>';
         echo '<p> Salary: ' . $job['salary'] . '</p></td>';
-        echo '<p> Qualifications: ' . $job['qualifications'] . '</p>';
+        echo '<p> Qualifications: ' . $job['qualifications'] . '</p></td>';
         echo '<td><p><a href ="/jobs/editaddjobs?id=' .$job['id'] . '">Edit This Job</a></p></td>';
         echo '<td><form method = "post" action = "/jobs/deletejobposting">
         <input type = "hidden" name = "id" value = "' . $job['id'] . '"/>
