@@ -7,16 +7,20 @@ require 'leftsectionadmin.html.php';
 
     <?php
     foreach ($inquiries as $inquiry) {
+        echo '<table>';
 		echo '<li>';
-	 	echo '<div class="details">';
+        echo '<tr>';
+	 	echo '<td><div class="details">';
 		echo '<h4> Customer Name: ' . $inquiry['name'] . '</h4>';
 		echo '<p> Customer Email: ' . $inquiry['email'] . '</p>';
         echo '<p> Customer Telephone: ' . $inquiry['telephone'] . '</p>';
         echo '<p> Inquiry: ' . $inquiry['inquiry'] . '</p>';
-        echo '<p> Complete: ' . $inquiry['completed'] . '</p>';
-        echo '<p><a href ="/inquiries/completeinquiries?id=' .$inquiry['id'] .'">Complete This Inquiry</a></p>';
+        echo '<p> Complete: ' . $inquiry['completed'] . '</p></td>';
+        echo '<td><p><a href ="/inquiries/completeinquiries?id=' .$inquiry['id'] .'">Complete This Inquiry</a></p></td>';
 		echo '</div>';
+        echo '</tr>';
 	 	echo '</li>';
+        echo '</table>';
 	 }
 
     if(!$inquiries) {
