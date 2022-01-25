@@ -2,7 +2,7 @@
 <h2>Contact Us</h2>
 <h3>Enter your details below:</h3>
 
-<form action=" " method="POST" >
+<form action="" method="POST" >
     <input type= "hidden" name= "inquiries[id]" value="<?=$inquiries['id'] ?? ''?>"/>
     <label>Name: </label><input type = "text" name="inquiries[name]" value=" <?=$inquiries['name'] ?? ''?>" required />
     <label>Email: </label> <input type="text" name = "inquiries[email]" value=" <?=$inquiries['email'] ?? ''?>"required />

@@ -15,7 +15,6 @@ require 'leftsectionadmin.html.php';
 		echo '<p> Customer Email: ' . $inquiry['email'] . '</p>';
         echo '<p> Customer Telephone: ' . $inquiry['telephone'] . '</p>';
         echo '<p> Inquiry: ' . $inquiry['inquiry'] . '</p>';
-        echo '<p> Complete: ' . $inquiry['completed'] . '</p></td>';
         echo '<td><p><a href ="/inquiries/completeinquiries?id=' .$inquiry['id'] .'">Complete This Inquiry</a></p></td>';
 		echo '</div>';
         echo '</tr>';

@@ -10,11 +10,9 @@ namespace load\controllers;
         public function loginSubmit() {
             $admin = $this->loginconnect->find('username', $_POST['username']);
             if(isset($_POST['submit'])) {
-               // var_dump($admin);
+               
                if (isset($admin[0])) {
-                  // $user = $admin->fetch();
                   if ($_POST['password'] == $admin[0]['password']) {
-                     // var_dump($_SESSION['loggedin']);
          
                      $_SESSION['loggedin'] = true;
                      $_SESSION['loggedin'] = $admin[0]['id'];

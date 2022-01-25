@@ -5,7 +5,7 @@ require 'leftsectionadmin.html.php';
 <section class = "right">
     <h2> Update or Add a Car</h2>
 
-    <form action=" " method="POST">
+    <form action="" method="POST">
         <input type= "hidden" name= "cars[id]" value="<?=$cars['id'] ?? ''?>"/>
         <label>Name: </label><input type = "text" name="cars[name]" value=" <?=$cars['name'] ?? ''?>" required/>
         <!--<label><Manufacturer:-->

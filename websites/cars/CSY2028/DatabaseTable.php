@@ -67,7 +67,7 @@ class DatabaseTable {
 
 	         $parameters = [];
 	         foreach ($record as $key => $value) {
-	                $parameters[] = $key . ' = :' .$key;
+	                $parameters[] = $key . '= :' .$key;
 	         	}
 
 	         $query .= implode(',', $parameters);
