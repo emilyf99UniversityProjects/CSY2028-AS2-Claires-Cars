@@ -14,7 +14,7 @@ require 'leftsectionadmin.html.php';
         <label>Before Price: </label><input type = "text" name="cars[beforeprice]" value=" <?=$cars['beforeprice'] ?? ''?>"/>
         <label>Mileage: </label><input type = "text" name="cars[mileage]" value=" <?=$cars['mileage'] ?? ''?>" required/>
         <label>Engine: </label><input type = "text" name="cars[engine]" value=" <?=$cars['engine'] ?? ''?>"required/>
-        <label>Archived: </label><input type = "checkbox" name="cars[archived]" value=" <?=$cars['archived'] ?? ''?>"/>
+        <label>Archived: </label><input type = "checkbox" name="cars[archived]" value= 1 />
         <input type= "submit" name = "submit" value = "Save" />
     </form>
 </section>
