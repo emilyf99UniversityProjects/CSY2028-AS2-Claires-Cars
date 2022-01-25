@@ -77,5 +77,17 @@ class Manufacturers {
             'class' => 'admin'
         ];
     }
+    
+    public function findmanufacturers(){
+        $manufacturers = $this->manufacturersconnect->findAll();
+
+        return [
+            'template' => 'cars.html.php',
+            'variables' => ['manufacturers' => $manufacturers],
+            'title' => 'Claire\'s Cars - Cars',
+            'class' => 'admin'
+        ];
+
+    }
 }
 ?>

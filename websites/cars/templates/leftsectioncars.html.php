@@ -1,7 +1,13 @@
 <section class="left">
 	<ul>
-		<li><a href="/cars/jaguar">Jaguar</a></li>
-		<li><a href="/cars/mercedes">Mercedes</a></li>
-		<li><a href="/cars/aston">Aston Martin</a></li>
+<?php
+foreach ($manufacturers as $manufacturer) {
+		
+	echo '<li>';
+	echo '<a href = "/manufacturers/findmanufacturers/?name=' . $manufacturer['name'] . '&id=' . $manufacturer['id'] . '">' . $manufacturer['name'] . '</a>';
+	echo '</li>';
+}
+
+?>
 	</ul>
 </section>

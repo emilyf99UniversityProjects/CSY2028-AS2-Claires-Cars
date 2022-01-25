@@ -2,7 +2,6 @@
 <?php 
 foreach ($jobs as $job) {
 		echo '<li>';
-
 	 	echo '<div class="details">';
 		echo '<h2>' . $job['title'] . ' ' . '</h2>';
 		echo '<p>Description: ' . $job['description'] . '</p>';
