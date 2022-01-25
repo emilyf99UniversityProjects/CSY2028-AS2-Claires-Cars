@@ -45,4 +45,4 @@ require 'leftsectionadmin.html.php';
     <?php
     }
     ?>
-</section>;
+</section>
