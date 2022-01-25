@@ -4,6 +4,9 @@
 
 <form action="" method="POST" >
     <input type= "hidden" name= "inquiries[id]" value="<?=$inquiries['id'] ?? ''?>"/>
+    <input type= "hidden" name= "inquiries[completeddate]" value="<?=$inquiries['completeddate'] ?? ''?>"/> 
+    <input type= "hidden" name= "inquiries[completedby]" value="<?=$inquiries['completedby'] ?? ''?>"/>
+    <input type = "hidden" name="inquiries[completed]" value= 0 />
     <label>Name: </label><input type = "text" name="inquiries[name]" value=" <?=$inquiries['name'] ?? ''?>" required />
     <label>Email: </label> <input type="text" name = "inquiries[email]" value=" <?=$inquiries['email'] ?? ''?>"required />
 	<label>Telephone: </label> <input type="text" name = "inquiries[telephone]" value=" <?=$inquiries['telephone'] ?? ''?>" required/>

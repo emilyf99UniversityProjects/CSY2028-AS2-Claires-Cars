@@ -80,7 +80,7 @@ namespace load\controllers;
 
     public function completeinquiriesSubmit() {
 
-        if(isset($_POST['submit'])) {
+        if(isset($_POST['inquiries'])) {
             $inquiries = $_POST['inquiries'];
             
             if ($inquiries['id'] == '') {
