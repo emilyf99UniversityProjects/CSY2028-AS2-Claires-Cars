@@ -43,6 +43,10 @@
 	 		echo '</li>';
 			echo '<table>';
 		}
+
+		else {
+			echo '<p>There are currently no cars in this category, please check again soon as we are always getting new stock.</p>';
+		}
 	 }
 	?>
 	</ul>
