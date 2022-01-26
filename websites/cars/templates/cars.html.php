@@ -1,6 +1,14 @@
-<?php 
-	require 'leftsectioncars.html.php';
-?>
+<section class="left">
+	<ul>
+        <?php 
+		foreach ($manufacturers as $manufacturer) {
+				echo '<li><a href=/cars/manufacturer?id=' . $manufacturer['id'] . '&name=' . $manufacturer['name'] . '>' . $manufacturer['name'] . '</a></li>';
+			}
+			?>
+	</ul>
+</section>
+	
+
 <section class = "right">
 	<h1>Our Cars</h1>
 

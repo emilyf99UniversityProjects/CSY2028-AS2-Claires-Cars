@@ -13,7 +13,7 @@
 			$manufacturersconnect = new \CSY2028\DatabaseTable($pdo, 'manufacturers', 'id');
 		
 			$controllers = [];
-			$controllers['cars'] = new \load\controllers\Cars($carsconnect);
+			$controllers['cars'] = new \load\controllers\Cars($carsconnect, $manufacturersconnect);
 			$controllers['inquiries'] = new \load\controllers\Inquiries($inquiriesconnect);
 			$controllers['jobs'] = new \load\controllers\Jobs($jobsconnect);
 			$controllers['admins'] = new \load\controllers\Login($adminsconnect);

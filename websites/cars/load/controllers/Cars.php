@@ -2,11 +2,12 @@
 namespace load\controllers;
 class Cars {
     private $carsconnect;
+    private $manufacturersconnect;
 
-    public function __construct($carsconnect) {
+    public function __construct($carsconnect, $manufacturersconnect) {
     $this-> carsconnect = $carsconnect;
+    $this-> manufacturersconnect = $manufacturersconnect;
     }
-
     public function home(){
         $cars = $this->carsconnect->findAll();
         return [
@@ -30,6 +31,7 @@ class Cars {
 
     public function cars() {
         $cars = $this->carsconnect->find('archived', 0);
+        $manufacturer = $this->manufacturersconnect->findAll();
         //$pagination = $this ->carsconnect->pagination();
         return [
             'template' => 'cars.html.php',
@@ -128,6 +130,18 @@ class Cars {
             'title' => 'Claire\'s Cars - Edit and Add Cars',
             'class' => 'admin'
         ];
+    }
+
+    public function manufacturers(){
+        $manufacturers = $this->manufacturersconnect->findAll();
+
+        return [
+            'template' => 'cars.html.php',
+            'variables' => ['manufacturers' => $manufacturers],
+            'title' => 'Claire\'s Cars - Cars',
+            'class' => 'admin'
+        ];
+
     }
 
 }
