@@ -16,7 +16,7 @@ namespace load\controllers;
          
                      $_SESSION['loggedin'] = true;
                      $_SESSION['loggedin'] = $admin[0]['id'];
-         
+                     $_SESSION['username'] = $_POST['username'];
                      return [
                         'template' => 'logincomplete.html.php',
                         'title' => 'Claire\'s Cars - Admin Login',

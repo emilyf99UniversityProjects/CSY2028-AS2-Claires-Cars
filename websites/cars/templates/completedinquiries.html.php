@@ -8,8 +8,8 @@ require 'leftsectionadmin.html.php';
     foreach ($inquiries as $inquiry) {
         echo '<table>';
 		echo '<li>';
-	 	echo '<div class="details">';
         echo '<tr>';
+	 	echo '<div class="details">';
 		echo '<td><h4> Customer Name: ' . $inquiry['name'] . '</h4>';
 		echo '<p> Customer Email: ' . $inquiry['email'] . '</p>';
         echo '<p> Customer Telephone: ' . $inquiry['telephone'] . '</p>';
