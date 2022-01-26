@@ -57,6 +57,10 @@ namespace load\controllers;
                 if ($news['id'] == '') {
                     $news['id'] = null;
                 }
+                $date = new DateTime();
+			
+			    $news = $_POST['news'];
+			    $news['dateposted'] = $date->format('Y-m-d H:i:s');
     
                 $this->newsconnect->save($news);
                 return [

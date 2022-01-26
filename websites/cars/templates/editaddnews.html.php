@@ -10,7 +10,6 @@ require 'leftsectionadmin.html.php';
         <label>Title: </label><input type = "text" name="news[title]" value=" <?=$news['title'] ?? ''?>"required/>
         <label>Content: </label><textarea name="news[content]" value=" <?=$news['content'] ?? ''?>"required></textarea>
         <!-- Image name -->
-        <input type= "hidden" name= "news[dateposted]" value="<?=$news['dateposted'] ?? ''?>"/>
         <input type= "hidden" name= "news[author]" value="<?=$_SESSION['username']?>"/>
         <input type= "submit" name = "submit" value = "Add Post" />
     </form>

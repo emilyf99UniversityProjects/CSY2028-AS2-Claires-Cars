@@ -35,7 +35,7 @@ class Cars {
         //$pagination = $this ->carsconnect->pagination();
         return [
             'template' => 'cars.html.php',
-            'variables' => ['cars' => $cars], 
+            'variables' => ['cars' => $cars, 'manufacturers' => $manufacturer], 
             'title' => 'Claires\'s Cars - Our Cars',
             'class' => 'admin'
             ];
@@ -132,17 +132,20 @@ class Cars {
         ];
     }
 
-    public function manufacturers(){
+     public function manufacturers(){
         $manufacturers = $this->manufacturersconnect->findAll();
+        $cars = $this->carsconnect->find('manufacturerId', $_GET['id']);
+        
 
         return [
             'template' => 'cars.html.php',
-            'variables' => ['manufacturers' => $manufacturers],
-            'title' => 'Claire\'s Cars - Cars',
+            'variables' => ['manufacturers' => $manufacturers, 'cars' => $cars],
+            'title' => $_GET['name'],
             'class' => 'admin'
         ];
 
     }
+
 
 }
 
