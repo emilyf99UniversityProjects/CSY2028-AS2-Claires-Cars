@@ -17,7 +17,6 @@ require 'leftsectionadmin.html.php';
         echo '<p> Inquiry: ' . $inquiry['inquiry'] . '</p>';
         echo '<td><form method="post" action="/inquiries/completeinquiries">
         <input type="hidden" name="inquiries[id]" value="' . $inquiry['id'] . '" />
-        <input type="hidden" name="inquiries[completedby]" value="' . $_SESSION['username'] . '" />
         <input type="hidden" name="inquiries[completed]" value="1" />
         <input type="submit" name="submit" value="Complete" />
         </form></td>';

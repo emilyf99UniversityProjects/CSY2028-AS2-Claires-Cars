@@ -83,9 +83,13 @@ namespace load\controllers;
         if(isset($_POST['inquiries'])) {
             $inquiries = $_POST['inquiries'];
             
-            if ($inquiries['id'] == '') {
-                $inquiries['id'] = null;
-            }
+            $date = new \DateTime();
+            $inquiries['completeddate'] = $date->format('Y-m-d H:i:s');
+            $inquiries['completedby'] = $_SESSION['username'];
+    
+                    if ($inquiries['id'] == '') {
+                        $inquiries['id'] = null;
+                    }
 
             $this->inquiriesconnect->save($inquiries);
             return [
