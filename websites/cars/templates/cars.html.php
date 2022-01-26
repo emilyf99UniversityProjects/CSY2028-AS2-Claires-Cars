@@ -28,7 +28,11 @@
 			}
 
 	 		echo '<div class="details">';
-			//echo '<h2>' . $manufacturer['name'] . ' ' . $car['name'] . '</h2>';
+			/*
+			$manufacturerid = $car['manufacturerId'];
+			findManufacturer($manufacturerid);
+			echo '<h2>' . $manufacturersname . '</h2>';*/
+
 			echo '<h2>' . $car['name'] . '</h2>';
 			
 			if($car['beforeprice'] == !null) {

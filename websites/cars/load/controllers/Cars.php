@@ -146,7 +146,12 @@ class Cars {
         ];
 
     }
-
+    /*
+    public function findManufacturer($value) {
+        $manufacturersearch = $this->manufacturersconnect->find('id', $value);
+        return $manufacturersname;
+    }
+    */
 
 }
 

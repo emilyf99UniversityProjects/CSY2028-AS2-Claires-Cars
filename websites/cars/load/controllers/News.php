@@ -52,15 +52,15 @@ namespace load\controllers;
         public function editaddnewsSubmit() {
 
             if(isset($_POST['submit'])) {
-                $news = $_POST['news'];
                 
+                $news = $_POST['news'];
+                $date = new \DateTime();
+			    $news['dateposted'] = $date->format('Y-m-d H:i:s');
+                $news['author'] = $_SESSION['username'];
+
                 if ($news['id'] == '') {
                     $news['id'] = null;
                 }
-                $date = new DateTime();
-			
-			    $news = $_POST['news'];
-			    $news['dateposted'] = $date->format('Y-m-d H:i:s');
     
                 $this->newsconnect->save($news);
                 return [

@@ -16,8 +16,8 @@ require 'leftsectionadmin.html.php';
         echo '<li>';
         echo '<tr>';
 		echo '<div class="details">';
-		//echo '<h2>' . $manufacturer['name'] . ' ' . $car['name'] . '</h2>';
 		echo '<td><h2>' . $car['name'] . '</h2>';
+        echo '<h2>' . $manufacturer['name'] . ' ' . $car['name'] . '</h2>';
         if($car['beforeprice'] == !null) {
 			echo '<h3>Before Price: £' . $car['beforeprice'] . '</h3>';
 		}

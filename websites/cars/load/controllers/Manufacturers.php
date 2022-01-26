@@ -77,20 +77,6 @@ class Manufacturers {
             'class' => 'admin'
         ];
     }
-    
-   /* public function manufacturers(){
-        $manufacturers = $this->manufacturersconnect->findAll();
-        $cars = $this->carsconnect->find('id', $_GET['id']);
-        
-
-        return [
-            'template' => 'manufacturers.html.php',
-            'variables' => ['manufacturers' => $manufacturers, 'cars' => $cars],
-            'title' => $_GET['name'],
-            'class' => 'admin'
-        ];
-
-    } */
 
 }
 ?>
