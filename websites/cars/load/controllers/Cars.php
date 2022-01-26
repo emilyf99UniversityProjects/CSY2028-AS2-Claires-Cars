@@ -103,13 +103,18 @@ class Cars {
             }
 
             $this->carsconnect->save($cars);
+
+            if ($_FILES['image']['error'] == 0) {
+                $fileName = $this->carsconnect->lastInsertId() . '.jpg';
+                move_uploaded_file($_FILES['image']['tmp_name'], 'images/cars/' . $fileName);
+            }
             
             return [
                 'template' => 'editaddcars.html.php',
                 'variables' => ['cars' => $cars],
                 'title' => 'Claire\'s Cars - Edit and Add Cars',
                 'class' => 'admin'
-            ];
+            ]; 
 
         }
     }
@@ -124,10 +129,10 @@ class Cars {
         else {
             $cars = false;
         }
-
+        $manufacturers =$this->manufacturersconnect->findAll();
         return [
             'template' => 'editaddcars.html.php',
-            'variables' => ['cars' => $cars],
+            'variables' => ['cars' => $cars, 'manufacturers' => $manufacturers],
             'title' => 'Claire\'s Cars - Edit and Add Cars',
             'class' => 'admin'
         ];
@@ -144,7 +149,6 @@ class Cars {
             'title' => $_GET['name'],
             'class' => 'admin'
         ];
-
     }
     /*
     public function findManufacturer($value) {
