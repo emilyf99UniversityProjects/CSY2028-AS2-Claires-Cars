@@ -103,6 +103,7 @@ class Cars {
             }
 
             $this->carsconnect->save($cars);
+            
             return [
                 'template' => 'editaddcars.html.php',
                 'variables' => ['cars' => $cars],
