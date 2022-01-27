@@ -102,5 +102,9 @@ class DatabaseTable {
 			echo '<a href = "index2.php?page=' . $page . '">' . $page . ' </a>';  
 		}
 	}
+	public function lastInsertId() {
+        return $this->pdo->lastInsertId();
+
+    }
 }
 

@@ -63,6 +63,11 @@ namespace load\controllers;
                 }
     
                 $this->newsconnect->save($news);
+
+                if ($_FILES['image']['error'] == 0) {
+                    $fileName = $this->newsconnect->lastInsertId() . '.jpg';
+                    move_uploaded_file($_FILES['image']['tmp_name'], 'images/articles/' . $fileName);
+                }
                 return [
                     'template' => 'editaddnews.html.php',
                     'variables' => ['news' => $news],

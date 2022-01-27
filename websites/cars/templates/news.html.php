@@ -6,7 +6,10 @@
         echo '<li>';
 	 	echo '<div class="details">';
 		echo '<h3>' . $newsarticle['title'] . '</h3>';
-        echo '<image src="images/articles/' . $newsarticle['imagename'] . '" width = 100px height = 100px >';
+        if (file_exists('images/articles/' . $newsarticle['id'] . '.jpg')) {
+            echo '<a href="images/articles/' . $newsarticle['id'] . '.jpg"><img src="/images/articles/' . $newsarticle['id'] . '.jpg" /></a>';
+        }
+        //echo '<image src="images/articles/' . $newsarticle['imagename'] . '" width = 100px height = 100px >';
 		echo '<p>' . $newsarticle['content'] . '</p>';
 		echo '<p>Publish Date: ' . $newsarticle['dateposted'] . '</p>';
 		echo '<p>Author: ' . $newsarticle['author'] . '</p>';
