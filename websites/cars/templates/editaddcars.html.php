@@ -38,6 +38,7 @@ require 'leftsectionadmin.html.php';
         <label>Mileage: </label><input type = "text" name="cars[mileage]" value="<?=$cars['mileage'] ?? ''?>" required/>
         <label>Engine: </label><input type = "text" name="cars[engine]" value="<?=$cars['engine'] ?? ''?>"required/>
         <label>Archived: </label><input type = "checkbox" name="cars[archived]" value= 1 />
+        <input type = "hidden" name="cars[archived]" value= 0 />
 
 		</div>
         </tr>
