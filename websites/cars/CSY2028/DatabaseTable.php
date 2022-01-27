@@ -43,6 +43,22 @@ class DatabaseTable {
 	}
 
 
+	/*public function findAll() {
+		$stmt = $this->pdo->prepare('SELECT * FROM ' . $this->table);
+
+		$stmt->execute();
+
+		return $stmt->fetchAll();
+	} */
+
+	public function findAllDESC($order) {
+		$stmt = $this->pdo->prepare('SELECT * FROM ' . $this->table . ' ORDER BY '. $order . ' DESC');
+
+		$stmt->execute();
+
+		return $stmt->fetchAll();
+	}
+
 	public function findAll() {
 		$stmt = $this->pdo->prepare('SELECT * FROM ' . $this->table);
 

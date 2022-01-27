@@ -8,7 +8,7 @@ namespace load\controllers;
         }
 
         public function news() {
-            $news = $this->newsconnect->findAll();
+            $news = $this->newsconnect->findAllDESC('id');
             return [
                 'template' => 'news.html.php',
                 'variables' => ['news' => $news],
