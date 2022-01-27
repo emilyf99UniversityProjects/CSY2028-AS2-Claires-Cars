@@ -1,7 +1,11 @@
 <?php
 if(isset($_SESSION['loggedin']) && ($_SESSION['loggedin'])) { 
- ?>
+
+ 	require 'leftsectionadmin.html.php';
+	 ?>
+	<section class= "right">
     <p>You are already logged in </p> 
+	</section>
  <?php
 }
 else {

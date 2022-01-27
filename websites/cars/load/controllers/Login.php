@@ -40,7 +40,7 @@ namespace load\controllers;
                 'template' => 'loginform.html.php',
                 'variables' => [''],
                 'title' => 'Claire\'s Cars - Admin Login',
-                'class' => 'login'
+                'class' => 'admin'
             ];
         }
 
