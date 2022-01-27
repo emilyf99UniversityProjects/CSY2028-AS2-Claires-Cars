@@ -10,9 +10,8 @@ namespace load\controllers;
         public function loginSubmit() {
             $admin = $this->loginconnect->find('username', $_POST['username']);
             if(isset($_POST['submit'])) {
-               
                if (isset($admin[0])) {
-                  if ($_POST['password'] == $admin[0]['password']) {
+                    if(password_verify($_POST['password'], $admin[0]['password'])) {
          
                      $_SESSION['loggedin'] = true;
                      $_SESSION['loggedin'] = $admin[0]['id'];
@@ -109,7 +108,8 @@ namespace load\controllers;
 
             if(isset($_POST['submit'])) {
                 $admins = $_POST['admins'];
-                
+                $admins['password'] = password_hash($admins['password'], PASSWORD_DEFAULT);
+
                 if ($admins['id'] == '') {
                     $admins['id'] = null;
                 }
