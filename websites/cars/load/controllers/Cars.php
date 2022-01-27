@@ -102,8 +102,6 @@ class Cars {
                 $cars['id'] = null;
             }
 
-
-            
             $this->carsconnect->save($cars);
 
             if ($_FILES['image']['error'] == 0) {

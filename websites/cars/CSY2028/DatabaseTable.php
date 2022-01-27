@@ -5,6 +5,8 @@ class DatabaseTable {
 	private $table;
 	private $primaryKey;
 
+	/*Unless commented all functions are taken from the JokeSite Provided by Dr Tom Butler in his lectures */
+
 	public function __construct($pdo, $table, $primaryKey) {
 		$this->pdo = $pdo;
 		$this->table = $table;
@@ -24,7 +26,7 @@ class DatabaseTable {
         $values = implode(',', $keys);
         $valuesWithColon = implode(',:', $keys);
 
-        $query = 'INSERT INTO ' . $this->table . '('. $values .') VALUES (:'. $valuesWithColon .')';
+        $query = 'INSERT INTO ' . $this->table . '('.$values.') VALUES (:'.$valuesWithColon.')';
 
         $stmt = $this->pdo->prepare($query);
 
@@ -42,15 +44,8 @@ class DatabaseTable {
 		return $stmt->fetchAll();
 	}
 
-
-	/*public function findAll() {
-		$stmt = $this->pdo->prepare('SELECT * FROM ' . $this->table);
-
-		$stmt->execute();
-
-		return $stmt->fetchAll();
-	} */
-
+	/*Created a new function, this finds all the records from a table like the find all function below,
+	returns all the results in descending order, used in the news articles to make the latest article on top */
 	public function findAllDESC($order) {
 		$stmt = $this->pdo->prepare('SELECT * FROM ' . $this->table . ' ORDER BY '. $order . ' DESC');
 
@@ -96,6 +91,7 @@ class DatabaseTable {
 	         $stmt->execute($record);
 	}
 
+	/*Currently unused function that is used to start a generic function for page numbers to make site easier to use */
 	public function pagination() {
 		$recordsOnPage = 5; 
 		$totalRecords = $this->pdo->prepare('SELECT COUNT(*) FROM ' . $this->table);
