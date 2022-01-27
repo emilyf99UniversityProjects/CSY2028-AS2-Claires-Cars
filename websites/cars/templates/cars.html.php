@@ -18,8 +18,6 @@
 
 	foreach ($cars as $car) {
 		if ($car['archived'] == 0) {
-			//$manu->execute(['id' => $car['manufacturerId']]);
-			//$manufacturer = $manu->fetch();
 			echo '<table>';
 			echo '<li>';
 
@@ -28,10 +26,6 @@
 			}
 
 	 		echo '<div class="details">';
-			/*
-			$manufacturerid = $car['manufacturerId'];
-			findManufacturer($manufacturerid);
-			echo '<h2>' . $manufacturersname . '</h2>';*/
 
 			echo '<h2>' . $car['name'] . '</h2>';
 			

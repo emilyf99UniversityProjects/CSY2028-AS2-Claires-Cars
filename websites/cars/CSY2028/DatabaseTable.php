@@ -86,9 +86,6 @@ class DatabaseTable {
 		$totalRecords->execute();
 		$numberOfPage = CEIL($totalRecords / $recordsOnPage);
 
-		//$stmt = $this->pdo->prepare('SELECT * FROM ' . $this->table);
-		//$stmt->execute();
-
 		if (!isset ($_GET['page']) ) {  
 			$page = 1;  
 		} else {  
@@ -105,10 +102,5 @@ class DatabaseTable {
 			echo '<a href = "index2.php?page=' . $page . '">' . $page . ' </a>';  
 		}
 	}
-
-	public function lastInsertId() {
-        return $this->pdo->lastInsertId();
-
-    }
 }
 

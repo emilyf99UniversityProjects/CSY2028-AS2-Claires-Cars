@@ -8,10 +8,7 @@ require 'leftsectionadmin.html.php';
 
     <?php
     foreach ($cars as $car) {
-
-        /*if (file_exists('images/cars/' . $car['id'] . '.jpg')) {
-            echo '<a href="images/cars/' . $car['id'] . '.jpg"><img src="/images/cars/' . $car['id'] . '.jpg" /></a>';
-        } */
+        
         echo '<table>';
         echo '<li>';
         echo '<tr>';
