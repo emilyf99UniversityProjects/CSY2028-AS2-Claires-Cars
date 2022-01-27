@@ -5,7 +5,7 @@ foreach ($jobs as $job) {
 	 	echo '<div class="details">';
 		echo '<h2>' . $job['title'] . ' ' . '</h2>';
 		echo '<p>Description: ' . $job['description'] . '</p>';
-		echo '<p>Salary: ' . $job['salary'] . '</p>';
+		echo '<p>Salary: £' . $job['salary'] . '</p>';
 		echo '<p>Qualifications Needed : ' . $job['qualifications'] . '</p>';
 		echo '</div>';
 	 	echo '</li>';
