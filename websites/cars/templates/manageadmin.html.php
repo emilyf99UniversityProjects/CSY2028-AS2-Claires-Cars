@@ -3,7 +3,7 @@ require 'leftsectionadmin.html.php';
 ?>
 <section class="right">
     <h2>Manage Admins</h2>
-    <p>Please do not leave this screen on display in public eye as passwords are listed</p>
+    <p>Please do not leave this screen on display as non-admins can change passwords</p>
     <p><a href ="/admins/editaddadmin">Add a New Admin</a></p>
 
     <?php
@@ -13,7 +13,6 @@ require 'leftsectionadmin.html.php';
         echo '<tr>';
 	 	echo '<td><div class="details">';
 		echo '<h4> Username: ' . $admin['username'] . '</h4>';
-		echo '<h4> Password: ' . $admin['password'] . '</h4></td>';
         echo '<td><p><a href ="/admins/editaddadmin?id=' .$admin['id'] .'">Edit This Admin</a></p></td>';
         echo '<td><form method = "post" action = "/admins/deleteadmin">
         <input type = "hidden" name = "id" value = "' . $admin['id'] . '"/>
