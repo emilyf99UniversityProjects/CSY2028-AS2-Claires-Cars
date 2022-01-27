@@ -13,7 +13,7 @@ require 'leftsectionadmin.html.php';
         <?php
 
                     if (isset($newsarticle) && file_exists('images/articles' . $news['id'] . '.jpg')) {
-                    echo '<img src="images/articles' . $news['id'] . '.jpg" />';
+                    echo '<img src="images/articles' . $news['id'] . '.jpg/>';
                      }
                 ?>
                 <label>Product image</label>

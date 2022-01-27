@@ -3,18 +3,21 @@
 
 <?php
     foreach($news as $newsarticle) {
+        echo '<table>';
         echo '<li>';
 	 	echo '<div class="details">';
-		echo '<h3>' . $newsarticle['title'] . '</h3>';
+		echo '<tr><h2>' . $newsarticle['title'] . '</h2></tr>';
         if (file_exists('images/articles/' . $newsarticle['id'] . '.jpg')) {
-            echo '<a href="images/articles/' . $newsarticle['id'] . '.jpg"><img src="/images/articles/' . $newsarticle['id'] . '.jpg" /></a>';
+            echo '<tr><a href="images/articles/' . $newsarticle['id'] . '.jpg"><img src="/images/articles/' . $newsarticle['id'] . '.jpg" /></a></tr>';
         }
-        //echo '<image src="images/articles/' . $newsarticle['imagename'] . '" width = 100px height = 100px >';
-		echo '<p>' . $newsarticle['content'] . '</p>';
-		echo '<p>Publish Date: ' . $newsarticle['dateposted'] . '</p>';
-		echo '<p>Author: ' . $newsarticle['author'] . '</p>';
+		echo '<tr><h3>' . $newsarticle['content'] . '</h3></tr>';
+        echo '<tr>';
+		echo '<td><p>Publish Date: ' . $newsarticle['dateposted'] . '</p></td>';
+		echo '<td><p>Author: ' . $newsarticle['author'] . '</p></td>';
+        echo '</tr>';
 		echo '</div>';
 	 	echo '</li>';
+        echo '</table>';
     }
 
     if(!$news) {
