@@ -105,6 +105,11 @@ class Cars {
 
             
             $this->carsconnect->save($cars);
+
+            if ($_FILES['image']['error'] == 0) {
+                $fileName = $this->carsconnect->lastInsertId() . '.jpg';
+                move_uploaded_file($_FILES['image']['tmp_name'], 'images/cars/' . $fileName);
+            }
             return [
                 'template' => 'editaddcars.html.php',
                 'variables' => ['cars' => $cars],

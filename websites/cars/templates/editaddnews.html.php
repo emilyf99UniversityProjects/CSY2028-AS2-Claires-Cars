@@ -11,14 +11,14 @@ require 'leftsectionadmin.html.php';
         <label>Content: </label><textarea name="news[content]" value=" <?=$news['content'] ?? ''?>"required></textarea>
       
         <?php
+        if (isset($newsarticle) && file_exists('images/articles' . $news['id'] . '.jpg')) 
+        {
+            echo '<img src="images/articles' . $news['id'] . '.jpg/>';
+        }
+        ?>
+        <label>Article Image: </label>
 
-                    if (isset($newsarticle) && file_exists('images/articles' . $news['id'] . '.jpg')) {
-                    echo '<img src="images/articles' . $news['id'] . '.jpg/>';
-                     }
-                ?>
-                <label>Product image</label>
-
-                <input type="file" name="image" />
+        <input type="file" name="image" />
         <input type= "hidden" name= "news[author]" value="<?=$_SESSION['username']?>"/>
         <input type= "submit" name = "submit" value = "Add Post" />
     </form>

@@ -5,10 +5,18 @@ require 'leftsectionadmin.html.php';
 <section class = "right">
     <h2> Update or Add a Car</h2>
 
-    <form action="" method="POST">
+    <form action="" method="POST" enctype="multipart/form-data">
         <input type= "hidden" name= "cars[id]" value="<?=$cars['id'] ?? ''?>"/>
         <label>Name: </label><input type = "text" name="cars[name]" value=" <?=$cars['name'] ?? ''?>" required/>
+        <?php
+        if (isset($car) && file_exists('images/cars' . $cars['id'] . '.jpg')) 
+        {
+            echo '<img src="images/cars' . $cars['id'] . '.jpg/>';
+        }
+        ?>
+        <label>Car Image: </label>
 
+        <input type="file" name="image" />
         <label>Manufacturer: </label>
         <select name="cars[manufacturerId]">
 		<?php
