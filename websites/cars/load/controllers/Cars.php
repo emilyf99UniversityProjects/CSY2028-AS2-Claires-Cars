@@ -38,7 +38,7 @@ class Cars {
             'variables' => ['cars' => $cars, 'manufacturers' => $manufacturer], 
             'title' => 'Claires\'s Cars - Our Cars',
             'class' => 'admin'
-        ];
+            ];
     }
 
     public function managearchivecars() {
@@ -101,8 +101,16 @@ class Cars {
             if ($cars['id'] == '') {
                 $cars['id'] = null;
             }
+
+
             
             $this->carsconnect->save($cars);
+            return [
+                'template' => 'editaddcars.html.php',
+                'variables' => ['cars' => $cars],
+                'title' => 'Claire\'s Cars - Edit and Add Cars',
+                'class' => 'admin'
+            ]; 
 
         }
     }
@@ -112,35 +120,24 @@ class Cars {
             $find = $this->carsconnect->find('id', $_GET['id']);
 
             $cars = $find[0];
-        
         }
-            $manufacturers = $this->manufacturersconnect->findAll();
-    
-            return [
+
+        else {
+            $cars = false;
+        }
+        
+            $manufacturers =$this->manufacturersconnect->findall();
+        return [
             'template' => 'editaddcars.html.php',
-            'variables' => ['cars' => $cars , 'manufacturers' => $manufacturers],
+            'variables' => ['cars' => $cars, 'manufacturers'=> $manufacturers],
             'title' => 'Claire\'s Cars - Edit and Add Cars',
             'class' => 'admin'
-            ];
-    }     
-
-
-    public function manufacturers(){
-        $manufacturers = $this->manufacturersconnect->findAll();
-        $cars = $this->carsconnect->find('manufacturerId', $_GET['id']);
-
-
-        return [
-            'template' => 'cars.html.php',
-            'variables' => ['manufacturers' => $manufacturers, 'cars' => $cars],
-            'title' => $_GET['name'],
-            'class' => 'admin'
         ];
-
     }
 
-
+   
 }
+
 
 
 ?> 
