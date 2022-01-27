@@ -17,10 +17,10 @@ namespace load\controllers;
                      $_SESSION['loggedin'] = $admin[0]['id'];
                      $_SESSION['username'] = $_POST['username'];
                      return [
-                        'template' => 'logincomplete.html.php',
-                        'title' => 'Claire\'s Cars - Admin Login',
+                        'template' => 'adminhub.html.php',
+                        'title' => 'Claire\'s Cars - Admin Hub',
                         'variables' => ['admin' => $admin],
-                        'class' => 'login'
+                        'class' => 'admin'
                       ];
                   }
                }
