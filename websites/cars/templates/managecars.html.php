@@ -8,16 +8,16 @@ require 'leftsectionadmin.html.php';
 
     <?php
     foreach ($cars as $car) {
-        /* Commented out temp due to image size
-        if (file_exists('images/cars/' . $car['id'] . '.jpg')) {
+
+        /*if (file_exists('images/cars/' . $car['id'] . '.jpg')) {
             echo '<a href="images/cars/' . $car['id'] . '.jpg"><img src="/images/cars/' . $car['id'] . '.jpg" /></a>';
-       }*/ 
+        } */
         echo '<table>';
         echo '<li>';
         echo '<tr>';
 		echo '<div class="details">';
 		echo '<td><h2>' . $car['name'] . '</h2>';
-        echo '<h2>' . $manufacturer['name'] . ' ' . $car['name'] . '</h2>';
+        //echo '<h2>' . $manufacturer['name'] . ' ' . $car['name'] . '</h2>';
         if($car['beforeprice'] == !null) {
 			echo '<h3>Before Price: £' . $car['beforeprice'] . '</h3>';
 		}
@@ -30,10 +30,7 @@ require 'leftsectionadmin.html.php';
         <input type = "hidden" name = "id" value = "' . $car['id'] . '"/>
         <input type = "submit" name = "submit" value= "Delete Car" />
         </form></td>';
-		echo '</div>';
-        echo '</tr>';
-	 	echo '</li>';
-        echo '</table>';
+
 	 }
 
     if(!$cars) {
@@ -42,4 +39,4 @@ require 'leftsectionadmin.html.php';
     <?php
     }
     ?>
-</section>;
+</section>
