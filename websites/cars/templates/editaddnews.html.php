@@ -7,8 +7,8 @@ require 'leftsectionadmin.html.php';
 
     <form action="" method="POST" enctype="multipart/form-data">
         <input type= "hidden" name= "news[id]" value="<?=$news['id'] ?? ''?>"/>
-        <label>Title: </label><input type = "text" name="news[title]" value=" <?=$news['title'] ?? ''?>"required/>
-        <label>Content: </label><textarea name="news[content]" value=" <?=$news['content'] ?? ''?>"required></textarea>
+        <label>Title: </label><input type = "text" name="news[title]" value="<?=$news['title'] ?? ''?>"required/>
+        <label>Content: </label><textarea name="news[content]" value="<?=$news['content'] ?? ''?>"required></textarea>
       
         <?php
         if (isset($newsarticle) && file_exists('images/articles' . $news['id'] . '.jpg')) 

@@ -5,8 +5,8 @@ class Cars {
     private $manufacturersconnect;
 
     public function __construct($carsconnect, $manufacturersconnect) {
-    $this-> carsconnect = $carsconnect;
-    $this-> manufacturersconnect = $manufacturersconnect;
+    $this->carsconnect = $carsconnect;
+    $this->manufacturersconnect = $manufacturersconnect;
     }
     public function home(){
         $cars = $this->carsconnect->findAll();
@@ -82,7 +82,7 @@ class Cars {
     }
 
     public function deletecarSubmit() {
-        $cars = $this ->carsconnect->delete($_POST['id']);
+        $cars = $this->carsconnect->delete($_POST['id']);
  
         return [
             'template' => 'delete.html.php',

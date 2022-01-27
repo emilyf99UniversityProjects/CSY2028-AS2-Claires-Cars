@@ -7,7 +7,7 @@ require 'leftsectionadmin.html.php';
 
     <form action="" method="POST" enctype="multipart/form-data">
         <input type= "hidden" name= "cars[id]" value="<?=$cars['id'] ?? ''?>"/>
-        <label>Name: </label><input type = "text" name="cars[name]" value=" <?=$cars['name'] ?? ''?>" required/>
+        <label>Name: </label><input type = "text" name="cars[name]" value="<?=$cars['name'] ?? ''?>" required/>
         <?php
         if (isset($car) && file_exists('images/cars' . $cars['id'] . '.jpg')) 
         {
@@ -32,11 +32,11 @@ require 'leftsectionadmin.html.php';
                 
         ?>
         </select>
-        <label>Price: </label><input type = "text" name="cars[price]" value=" <?=$cars['price'] ?? ''?>" required/>
-        <label>Description: </label><input type = "text" name="cars[description]" value=" <?=$cars['description'] ?? ''?>" required/>
-        <label>Before Price: </label><input type = "text" name="cars[beforeprice]" value=" <?=$cars['beforeprice'] ?? ''?>"/>
-        <label>Mileage: </label><input type = "text" name="cars[mileage]" value=" <?=$cars['mileage'] ?? ''?>" required/>
-        <label>Engine: </label><input type = "text" name="cars[engine]" value=" <?=$cars['engine'] ?? ''?>"required/>
+        <label>Price: </label><input type = "text" name="cars[price]" value="<?=$cars['price'] ?? ''?>" required/>
+        <label>Description: </label><input type = "text" name="cars[description]" value="<?=$cars['description'] ?? ''?>" required/>
+        <label>Before Price: </label><input type = "text" name="cars[beforeprice]" value="<?=$cars['beforeprice'] ?? ''?>"/>
+        <label>Mileage: </label><input type = "text" name="cars[mileage]" value="<?=$cars['mileage'] ?? ''?>" required/>
+        <label>Engine: </label><input type = "text" name="cars[engine]" value="<?=$cars['engine'] ?? ''?>"required/>
         <label>Archived: </label><input type = "checkbox" name="cars[archived]" value= 1 />
 
 		</div>

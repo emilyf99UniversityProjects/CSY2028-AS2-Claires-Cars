@@ -7,8 +7,8 @@ require 'leftsectionadmin.html.php';
 
     <form action="" method="POST">
         <input type= "hidden" name= "admins[id]" value="<?=$admins['id'] ?? ''?>"/>
-        <label>Name: </label><input type = "text" name="admins[username]" value=" <?=$admins['username'] ?? ''?>"required/>
-        <label>Password: </label><input type = "password" name="admins[password]" value=" <?=$admins['password'] ?? ''?>"required/>
+        <label>Name: </label><input type = "text" name="admins[username]" value="<?=$admins['username'] ?? ''?>"required/>
+        <label>Password: </label><input type = "password" name="admins[password]" value="<?=$admins['password'] ?? ''?>"required/>
         <input type= "submit" name = "submit" value = "Save" />
     </form>
 </section>

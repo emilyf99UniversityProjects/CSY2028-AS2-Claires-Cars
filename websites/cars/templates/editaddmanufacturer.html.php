@@ -7,7 +7,7 @@ require 'leftsectionadmin.html.php';
 
     <form action="" method="POST">
         <input type= "hidden" name= "manufacturers[id]" value="<?=$manufacturers['id'] ?? ''?>"/>
-        <label>Name: </label><input type = "text" name="manufacturers[name]" value=" <?=$manufacturers['name'] ?? ''?>"required/>
+        <label>Name: </label><input type = "text" name="manufacturers[name]" value="<?=$manufacturers['name'] ?? ''?>"required/>
         <input type= "submit" name = "submit" value = "Save" />
     </form>
 </section>

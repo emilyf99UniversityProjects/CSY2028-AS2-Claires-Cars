@@ -7,6 +7,7 @@ class EntryPoint {
  }
  public function run() {
  $route = ltrim(explode('?', $_SERVER['REQUEST_URI'])[0], '/');
+ 
  $this->routes->checkLogin($route);
  if ($route == '') {
     $route = $this->routes->getDefaultRoute();
