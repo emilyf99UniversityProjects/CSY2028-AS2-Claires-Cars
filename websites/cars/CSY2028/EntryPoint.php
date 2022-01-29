@@ -34,6 +34,10 @@ class EntryPoint {
  require $fileName;
  $contents = ob_get_clean();
  return $contents;
+
+ /*generic page that can be reused on other sites for generating creating the pages without the index,
+ the only thing you would need to change would be the require for the layout as that is the 
+ index page layout that is used on every page*/
  }
 }
-
+?>

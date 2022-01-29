@@ -6,4 +6,5 @@ function autoload($className) {
 }
 
 spl_autoload_register('autoload');
+/*Code Sourced from JokeSite by Tom Butler */
 ?>

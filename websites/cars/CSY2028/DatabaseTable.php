@@ -6,6 +6,9 @@ class DatabaseTable {
 	private $primaryKey;
 
 	/*Unless commented all functions are taken from the JokeSite Provided by Dr Tom Butler in his lectures */
+	/*Self created functions are findallDESC which is used on the news page ,
+	the unused paginaton function which was going to be used to improve site readability,
+	and the lastinsertID function which is used when uploading images on the site  */
 
 	public function __construct($pdo, $table, $primaryKey) {
 		$this->pdo = $pdo;
@@ -44,7 +47,7 @@ class DatabaseTable {
 		return $stmt->fetchAll();
 	}
 
-	/*Created a new function, this finds all the records from a table like the find all function below,
+	/*Created a new function, this finds all the records from a table like the original find all function below,
 	returns all the results in descending order, used in the news articles to make the latest article on top */
 	public function findAllDESC($order) {
 		$stmt = $this->pdo->prepare('SELECT * FROM ' . $this->table . ' ORDER BY '. $order . ' DESC');
@@ -109,11 +112,12 @@ class DatabaseTable {
 		$stmt = $this->pdo->prepare('SELECT * FROM ' . $this->table . ' ORDER BY id ' . 'LIMIT '. $limit . ',' . $recordsOnPage);
 		$stmt->execute();
 
-		//move this out into controller?
 		for($page = 1; $page<= $numberOfPage; $page++) {  
 			echo '<a href = "index2.php?page=' . $page . '">' . $page . ' </a>';  
 		}
 	}
+
+	//used for image return
 	public function lastInsertId() {
         return $this->pdo->lastInsertId();
 
