@@ -1,3 +1,5 @@
+<!--The admin navigation menu is seperated into it's own file so it can be used exclusively on admin pages.
+	This minimises code repetition by removing the need to copy the below code into different pages -->
 <section class="left">
 	<ul>
 		<li><a href="/admins/manageadmins">Manage Admins</a></li>
