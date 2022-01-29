@@ -7,6 +7,10 @@ namespace load\controllers;
         $this-> newsconnect = $newsconnect;
         }
 
+        /*This function is used to find all the articles in the news table, 
+        they are sorted Descending so the top article is the newest */
+
+        //the home page is returned with the articles
         public function news() {
             $news = $this->newsconnect->findAllDESC('id');
             return [
@@ -17,8 +21,13 @@ namespace load\controllers;
             ];
         }
 
+        /*This function is used in the admin hub, it is used on the manage news page and pulls all the records out
+        so they can be changed by admins */
+
+        /*If the user is logged in then the page is manage page is returned with the articles in it.
+        If not a login eror is displayed and the user is asked to login  */
         public function managenews() {
-            $news = $this->newsconnect->findAll();
+            $news = $this->newsconnect->findAllDESC('id');
             if(isset($_SESSION['loggedin'])) {
                 return [
                     'template' => 'managenews.html.php',
