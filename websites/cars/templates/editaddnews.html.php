@@ -1,4 +1,5 @@
 <?php
+//calls the admin sub navigation bar so the user can go back to the admin menu easily
 require 'leftsectionadmin.html.php';
 ?>
 
