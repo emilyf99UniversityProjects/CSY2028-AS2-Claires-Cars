@@ -3,7 +3,7 @@
 	class Routes implements \CSY2028\Routes {
     	public function getController($name) {
 
-			//Getting the databas connection
+			//Getting the database connection
     		require '../databasejoin.php';
 
 			//connecting the database tables to a variable and applying name spaces to them
@@ -38,12 +38,37 @@
     	return 'news/news';
 	}
  
-	/* Function is not needed but left in in case future sites need it */
-	/* Can be used to stop users who aren't logged in from accessing pages */
+	/* Can be used to stop users who aren't logged in from accessing pages admin pages, 
+	if not logged in they are returned to the login page */
  	public function checkLogin($route) {
  	session_start();
  	$loginRoutes = [];
 
+	$loginRoutes['admins/manageadmins'] = true;
+	$loginRoutes['admins/editaddadmin'] = true;
+	$loginRoutes['admins/deleteadmin'] = true;
+
+	$loginRoutes['cars/managecars'] = true;
+	$loginRoutes['cars/editaddcars'] = true;
+	$loginRoutes['cars/deletecars'] = true;
+
+	$loginRoutes['jobs/managecareers'] = true;
+	$loginRoutes['jobs/editaddjobs'] = true;
+	$loginRoutes['jobs/deletejobs'] = true;
+
+	$loginRoutes['inquiries/manageinquiries'] = true;
+	$loginRoutes['inquiries/completeinquiries'] = true;
+	$loginRoutes['inquiries/completedinquiries'] = true;
+	
+	$loginRoutes['manufacturers/managemanufacturers'] = true;
+	$loginRoutes['manufacturers/editaddmanufacturer'] = true;
+	$loginRoutes['manufacturers/deletemanufacturer'] = true;
+
+	$loginRoutes['news/managenews'] = true;
+	$loginRoutes['news/editaddnews'] = true;
+	$loginRoutes['news/deletenews'] = true;
+
+	
 	$requiresLogin = $loginRoutes[$route] ?? false;
 
  		if ($requiresLogin && !isset($_SESSION['loggedin'])) {
