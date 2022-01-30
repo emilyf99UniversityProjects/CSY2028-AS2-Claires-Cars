@@ -164,5 +164,78 @@ class Cars {
         ];
 
     }
+
+    public function archiveSubmit() {
+
+        if(isset($_POST['submit'])) {
+            $cars = $_POST['cars'];
+            
+            $this->carsconnect->save($cars);
+            return [
+                'template' => 'edit.html.php',
+                'variables' => ['cars' => $cars],
+                'title' => 'Claire\'s Cars - Archive',
+                'class' => 'admin'
+            ];
+
+        }
+    }
+    public function archive(){
+        if(isset($_GET['id'])) {
+            $find = $this->carsconnect->find('id', $_GET['id']);
+
+            $cars = $find[0];
+        }
+
+        else {
+            $cars = false;
+        }
+
+        $manufacturers =$this->manufacturersconnect->findall();
+        return [
+            'template' => 'edit.html.php',
+            'variables' => ['cars' => $cars],
+            'title' => 'Claire\'s Cars - Archived',
+            'class' => 'admin'
+        ];
+    }
+
+    public function unarchiveSubmit() {
+
+        if(isset($_POST['submit'])) {
+            $cars = $_POST['cars'];
+            
+            $this->carsconnect->save($cars);
+
+            $manufacturers =$this->manufacturersconnect->findall();
+            return [
+                'template' => 'edit.html.php',
+                'variables' => ['cars' => $cars],
+                'title' => 'Claire\'s Cars - Unarchive',
+                'class' => 'admin'
+            ];
+
+        }
+    }
+
+    public function unarchive(){
+        if(isset($_GET['id'])) {
+            $find = $this->carsconnect->find('id', $_GET['id']);
+
+            $cars = $find[0];
+        }
+
+        else {
+            $cars = false;
+        }
+
+        return [
+            'template' => 'edit.html.php',
+            'variables' => ['cars' => $cars],
+            'title' => 'Claire\'s Cars - Removed From Archive',
+            'class' => 'admin'
+        ];
+    }
+    
 } 
 ?> 

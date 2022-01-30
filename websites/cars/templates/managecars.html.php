@@ -27,6 +27,12 @@ require 'leftsectionadmin.html.php';
 		echo '<p>' . $car['description'] . '</p>';
 		echo '<p> Mileage : ' . $car['mileage'] . ' miles</p>';
 		echo '<p> Engine Type: ' . $car['engine'] . '</p></td>';
+        echo '<td><form method="post" action="/cars/archive">
+        <input type="hidden" name="cars[id]" value="' . $car['id'] . '" />
+        <input type="hidden" name="cars[archived]" value="1" /> 
+        <input type="submit" name="submit" value="Archive this Car" /> </form></td>';
+        
+       
         //an edit button is displayed in each record that uses the car ID in the link to provide a unique record page
         echo '<td><p><a href = "/cars/editaddcars?id=' .$car['id'] . '">Edit Car</a></p></td>';
         //delete function is on a link, rather than open a new page when clicked it deletes the car straight away
