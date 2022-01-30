@@ -7,7 +7,7 @@ require 'leftsectionadmin.html.php';
     <p>This is where all the held cars are archived.</p>
     <p>These cars do not show up in the showroom.</p>
     <!--Add cars link is before the records so it can easily be found by the admin -->
-    <p><a href ="/cars/editaddcars">Add a New Car to the Archive</a></p>
+    <p><a href ="/cars/editaddcars">Add a New Car</a></p>
 
     <?php
     //for each car record found in the database it is displayed as a row in the table
