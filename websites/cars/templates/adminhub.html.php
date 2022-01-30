@@ -10,4 +10,4 @@ require 'leftsectionadmin.html.php';
 <p>Welcome to the admin hub, you are successfully logged in.</p>
 <p>Use the Menu on the Right to Navigate the Admin Hub</p>
 <p>Please log out when you are done.</p>
-</section>;
+</section>
