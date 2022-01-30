@@ -30,7 +30,7 @@ namespace load\controllers;
             $this->inquiriesconnect->save($inquiries);
 
             return [
-                'template' => 'contact.html.php',
+                'template' => 'requestrecieved.html.php',
                 'variables' => ['inquiries' => $inquiries],
                 'title' => 'Claire\'s Cars - Inquiries',
                 'class' => 'contact'
