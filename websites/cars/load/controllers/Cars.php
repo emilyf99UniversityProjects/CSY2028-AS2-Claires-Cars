@@ -165,6 +165,8 @@ class Cars {
 
     }
 
+    /* When the archive button is clicked the change to the variable, see table, is made and the page is updated */
+    //the user sees a prompt telling them that their changes have been made
     public function archiveSubmit() {
 
         if(isset($_POST['submit'])) {
@@ -180,6 +182,7 @@ class Cars {
 
         }
     }
+    /*The ID and the Manufacturer of the car are found to be used by the submit */
     public function archive(){
         if(isset($_GET['id'])) {
             $find = $this->carsconnect->find('id', $_GET['id']);
@@ -200,6 +203,8 @@ class Cars {
         ];
     }
 
+    /* When the archive button is clicked the change to the variable, see table, is made and the page is updated */
+    //the user sees a prompt telling them that their changes have been made
     public function unarchiveSubmit() {
 
         if(isset($_POST['submit'])) {
@@ -217,7 +222,7 @@ class Cars {
 
         }
     }
-
+    /*The ID and the Manufacturer of the car are found to be used by the submit */
     public function unarchive(){
         if(isset($_GET['id'])) {
             $find = $this->carsconnect->find('id', $_GET['id']);

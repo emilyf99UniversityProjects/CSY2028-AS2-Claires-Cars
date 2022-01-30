@@ -28,6 +28,8 @@ require 'leftsectionadmin.html.php';
 		echo '<p>' . $car['description'] . '</p>';
 		echo '<p> Mileage : ' . $car['mileage'] . ' miles</p>';
 		echo '<p> Engine Type: ' . $car['engine'] . '</p></td>';
+        /*if the archive button is clicked then the archive value should change to 0 and the car will be moved to
+        the unarchived car list*/
         echo '<td><form method="post" action="/cars/unarchive">
         <input type="hidden" name="cars[id]" value="' . $car['id'] . '" />
         <input type="hidden" name="cars[archived]" value="0" /> 

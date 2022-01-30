@@ -50,14 +50,7 @@ require 'leftsectionadmin.html.php';
         <label>Before Price: </label><input type = "text" name="cars[beforeprice]" value="<?=$cars['beforeprice'] ?? ''?>"/>
         <label>Mileage: </label><input type = "text" name="cars[mileage]" value="<?=$cars['mileage'] ?? ''?>" required/>
         <label>Engine: </label><input type = "text" name="cars[engine]" value="<?=$cars['engine'] ?? ''?>"required/>
-
-        <!--Checkbox has the value of 1 as when ticked this is the value used in the database to mark it is archived
-            There is a hidden value underneath that has the same name as the checkbox with the value 0. This sets the 
-            value to 0 (as in non-archived) if the checkbox is not selected -->
-        <label>Archived: </label><input type = "checkbox" name="cars[archived]" value= 1 />
-        <input type = "hidden" name="cars[archived]" value= 0 />
-
-		</div>
+        </div>
         </tr>
 	 	</li>
         </table>
