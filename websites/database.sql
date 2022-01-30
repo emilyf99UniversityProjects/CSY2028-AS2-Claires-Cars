@@ -35,7 +35,7 @@ CREATE TABLE `admins` (
   `password` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +44,7 @@ CREATE TABLE `admins` (
 
 LOCK TABLES `admins` WRITE;
 /*!40000 ALTER TABLE `admins` DISABLE KEYS */;
-INSERT INTO `admins` VALUES ('Admin','$2y$10$0ut.Ps.4B1s/GDEcJxDVo.Qrme6lWD.A5EGpxv4VbK3PrjSP2ZhF.',1),('Aandy','$2y$10$a7dA/u/ExlYbKUf0yvEU0ut4PZdC8fF0gcOR8N/Zakoi7N65IWA.e',12);
+INSERT INTO `admins` VALUES ('Admin','$2y$10$0ut.Ps.4B1s/GDEcJxDVo.Qrme6lWD.A5EGpxv4VbK3PrjSP2ZhF.',1),('Fred','$2y$10$BabkXiLZ4o2sp3WLWpDv6usToruKRqAiqsRnU6Cqlmr41g/Tu1RdK',13);
 /*!40000 ALTER TABLE `admins` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -66,7 +66,7 @@ CREATE TABLE `cars` (
   `engine` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `archived` int(2) DEFAULT 0,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -75,7 +75,7 @@ CREATE TABLE `cars` (
 
 LOCK TABLES `cars` WRITE;
 /*!40000 ALTER TABLE `cars` DISABLE KEYS */;
-INSERT INTO `cars` VALUES (3,'E-Type','30000',2,'Excellent condition used E-Type.',' 45000',20000,'Petrol',0),(4,'280SL','35000',3,'Gold, in excellent condition.',NULL,15000,'Petrol',0),(5,'300SL','14000',3,'1992 model.',NULL,70000,'Petrol',0),(6,'DB4','99000',4,'Classic DB4. Minor scratches but otherwise flawless condition. ','10000        ',20000,'Petrol',0),(10,'Nova SR','8000',22,'This grey 1985 sport edition of the Vauxhall Nova is in great condition, this car is restored to like new condition with a replacement engine','12000',10000,'Petrol',0),(11,'Cozy Coupe','50',24,'This classic British Staple can be yours, excellent condition, slight damage to the horn.','1050',1000,'Pedal Power',0);
+INSERT INTO `cars` VALUES (3,'E-Type','30000',2,'Excellent condition used E-Type.',' 45000',20000,'Petrol',0),(4,'280SL','35000',3,'Gold, in excellent condition.',NULL,15000,'Petrol',0),(5,'300SL','14000',3,'1992 model.',NULL,70000,'Petrol',0),(6,'DB4','99000',4,'Classic DB4. Minor scratches but otherwise flawless condition. ','10000        ',20000,'Petrol',0),(10,'Nova SR','8000',22,'This grey 1985 sport edition of the Vauxhall Nova is in great condition, this car is restored to like new condition with a replacement engine','12000',10000,'Petrol',0),(11,'Cozy Coupe','50',24,'This classic British Staple can be yours, excellent condition, slight damage to the horn.','1050',1000,'Pedal Power',1);
 /*!40000 ALTER TABLE `cars` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -96,7 +96,7 @@ CREATE TABLE `inquiries` (
   `completeddate` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `completedby` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -105,7 +105,7 @@ CREATE TABLE `inquiries` (
 
 LOCK TABLES `inquiries` WRITE;
 /*!40000 ALTER TABLE `inquiries` DISABLE KEYS */;
-INSERT INTO `inquiries` VALUES (8,' Sarah Jane',' SarahJane@example.come','07456895123',' Hello, When you be open on Sundays Again?',1,'2022-01-30 13:30:24','Aandy'),(9,'Mary Sue','MarySue@example.com','07458012569',' Hello, Could you let me know wehn you get and fords in? I can\'t see any on your website',1,'2022-01-30 13:31:10','Admin'),(10,'Mandy Stevens','MandyStevens@yahoo.com','0745859631',' Do you have and red cars in stock?',0,NULL,NULL);
+INSERT INTO `inquiries` VALUES (8,' Sarah Jane',' SarahJane@example.come','07456895123',' Hello, When you be open on Sundays Again?',1,'2022-01-30 13:30:24','Aandy'),(9,'Mary Sue','MarySue@example.com','07458012569',' Hello, Could you let me know wehn you get and fords in? I can\'t see any on your website',1,'2022-01-30 13:31:10','Admin'),(10,'Mandy Stevens','MandyStevens@yahoo.com','0745859631',' Do you have and red cars in stock?',1,'2022-01-30 20:44:00','Admin'),(11,'Andy','andy@test.com','0145256325',' How do I apply for a job?',0,'2022-01-30 20:44:58','Admin');
 /*!40000 ALTER TABLE `inquiries` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -123,7 +123,7 @@ CREATE TABLE `jobs` (
   `salary` int(11) DEFAULT NULL,
   `qualifications` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -146,7 +146,7 @@ CREATE TABLE `manufacturers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -182,7 +182,7 @@ CREATE TABLE `news` (
 
 LOCK TABLES `news` WRITE;
 /*!40000 ALTER TABLE `news` DISABLE KEYS */;
-INSERT INTO `news` VALUES (8,'New Website','We have a new website yay','2022-01-30 13:41:09','Aandy'),(9,'Its our Birthday!','Today is our 10th Birthday','2022-01-30 13:38:15','Admin'),(10,'Bank Holiday','We are closed next bank holiday! ','2022-01-30 13:38:52','Admin');
+INSERT INTO `news` VALUES (8,'New Website','We have a new website yay','2022-01-30 13:41:09','Aandy'),(9,'Its our Birthday!','Today is our 10th Birthday','2022-01-30 13:38:15','Admin');
 /*!40000 ALTER TABLE `news` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -566,7 +566,7 @@ CREATE TABLE `innodb_index_stats` (
 
 LOCK TABLES `innodb_index_stats` WRITE;
 /*!40000 ALTER TABLE `innodb_index_stats` DISABLE KEYS */;
-INSERT INTO `innodb_index_stats` VALUES ('cars','admins','PRIMARY','2022-01-30 13:25:34','n_diff_pfx01',2,1,'id'),('cars','admins','PRIMARY','2022-01-30 13:25:34','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('cars','admins','PRIMARY','2022-01-30 13:25:34','size',1,NULL,'Number of pages in the index'),('cars','cars','PRIMARY','2022-01-30 13:35:51','n_diff_pfx01',6,1,'id'),('cars','cars','PRIMARY','2022-01-30 13:35:51','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('cars','cars','PRIMARY','2022-01-30 13:35:51','size',1,NULL,'Number of pages in the index'),('cars','inquiries','PRIMARY','2022-01-30 13:14:29','n_diff_pfx01',2,1,'id'),('cars','inquiries','PRIMARY','2022-01-30 13:14:29','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('cars','inquiries','PRIMARY','2022-01-30 13:14:29','size',1,NULL,'Number of pages in the index'),('cars','jobs','PRIMARY','2022-01-30 13:28:00','n_diff_pfx01',0,1,'id'),('cars','jobs','PRIMARY','2022-01-30 13:28:00','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('cars','jobs','PRIMARY','2022-01-30 13:28:00','size',1,NULL,'Number of pages in the index'),('cars','manufacturers','PRIMARY','2022-01-30 13:36:14','n_diff_pfx01',5,1,'id'),('cars','manufacturers','PRIMARY','2022-01-30 13:36:14','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('cars','manufacturers','PRIMARY','2022-01-30 13:36:14','size',1,NULL,'Number of pages in the index'),('cars','news','PRIMARY','2022-01-30 13:40:00','n_diff_pfx01',4,1,'id'),('cars','news','PRIMARY','2022-01-30 13:40:00','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('cars','news','PRIMARY','2022-01-30 13:40:00','size',1,NULL,'Number of pages in the index'),('mysql','gtid_slave_pos','PRIMARY','2022-01-17 01:25:01','n_diff_pfx01',0,1,'domain_id'),('mysql','gtid_slave_pos','PRIMARY','2022-01-17 01:25:01','n_diff_pfx02',0,1,'domain_id,sub_id'),('mysql','gtid_slave_pos','PRIMARY','2022-01-17 01:25:01','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('mysql','gtid_slave_pos','PRIMARY','2022-01-17 01:25:01','size',1,NULL,'Number of pages in the index');
+INSERT INTO `innodb_index_stats` VALUES ('cars','admins','PRIMARY','2022-01-30 19:36:14','n_diff_pfx01',2,1,'id'),('cars','admins','PRIMARY','2022-01-30 19:36:14','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('cars','admins','PRIMARY','2022-01-30 19:36:14','size',1,NULL,'Number of pages in the index'),('cars','cars','PRIMARY','2022-01-30 20:08:00','n_diff_pfx01',6,1,'id'),('cars','cars','PRIMARY','2022-01-30 20:08:00','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('cars','cars','PRIMARY','2022-01-30 20:08:00','size',1,NULL,'Number of pages in the index'),('cars','inquiries','PRIMARY','2022-01-30 13:14:29','n_diff_pfx01',2,1,'id'),('cars','inquiries','PRIMARY','2022-01-30 13:14:29','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('cars','inquiries','PRIMARY','2022-01-30 13:14:29','size',1,NULL,'Number of pages in the index'),('cars','jobs','PRIMARY','2022-01-30 20:28:00','n_diff_pfx01',0,1,'id'),('cars','jobs','PRIMARY','2022-01-30 20:28:00','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('cars','jobs','PRIMARY','2022-01-30 20:28:00','size',1,NULL,'Number of pages in the index'),('cars','manufacturers','PRIMARY','2022-01-30 20:51:46','n_diff_pfx01',5,1,'id'),('cars','manufacturers','PRIMARY','2022-01-30 20:51:46','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('cars','manufacturers','PRIMARY','2022-01-30 20:51:46','size',1,NULL,'Number of pages in the index'),('cars','news','PRIMARY','2022-01-30 13:40:00','n_diff_pfx01',4,1,'id'),('cars','news','PRIMARY','2022-01-30 13:40:00','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('cars','news','PRIMARY','2022-01-30 13:40:00','size',1,NULL,'Number of pages in the index'),('mysql','gtid_slave_pos','PRIMARY','2022-01-17 01:25:01','n_diff_pfx01',0,1,'domain_id'),('mysql','gtid_slave_pos','PRIMARY','2022-01-17 01:25:01','n_diff_pfx02',0,1,'domain_id,sub_id'),('mysql','gtid_slave_pos','PRIMARY','2022-01-17 01:25:01','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('mysql','gtid_slave_pos','PRIMARY','2022-01-17 01:25:01','size',1,NULL,'Number of pages in the index');
 /*!40000 ALTER TABLE `innodb_index_stats` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -594,7 +594,7 @@ CREATE TABLE `innodb_table_stats` (
 
 LOCK TABLES `innodb_table_stats` WRITE;
 /*!40000 ALTER TABLE `innodb_table_stats` DISABLE KEYS */;
-INSERT INTO `innodb_table_stats` VALUES ('cars','admins','2022-01-30 13:25:34',2,1,0),('cars','cars','2022-01-30 13:35:51',6,1,0),('cars','inquiries','2022-01-30 13:14:29',2,1,0),('cars','jobs','2022-01-30 13:28:00',0,1,0),('cars','manufacturers','2022-01-30 13:36:14',5,1,0),('cars','news','2022-01-30 13:40:00',4,1,0),('mysql','gtid_slave_pos','2022-01-17 01:25:01',0,1,0);
+INSERT INTO `innodb_table_stats` VALUES ('cars','admins','2022-01-30 19:36:14',2,1,0),('cars','cars','2022-01-30 20:08:00',6,1,0),('cars','inquiries','2022-01-30 13:14:29',2,1,0),('cars','jobs','2022-01-30 20:28:00',0,1,0),('cars','manufacturers','2022-01-30 20:51:46',5,1,0),('cars','news','2022-01-30 13:40:00',4,1,0),('mysql','gtid_slave_pos','2022-01-17 01:25:01',0,1,0);
 /*!40000 ALTER TABLE `innodb_table_stats` ENABLE KEYS */;
 UNLOCK TABLES;
 
