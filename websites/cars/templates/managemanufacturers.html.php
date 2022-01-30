@@ -30,7 +30,7 @@ require 'leftsectionadmin.html.php';
 	 }
      /*if there a no manufacturer records found a message is displayed to the user so they have a physical prompt to look at 
       and are not confused by a blank page*/
-    if(!$manufacturer) {
+    if(!$manufacturers) {
     ?>
     <p>There are currently no Manufacturers in the database.</p>
     <?php
