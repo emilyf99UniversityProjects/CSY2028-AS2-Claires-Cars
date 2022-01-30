@@ -46,7 +46,7 @@ class Manufacturers {
 
     /*Once the edit or add button has been selected the changes have been saved to the record and a prompt
     is displayed to let the user know thier changes have been made.
-    If there is no manufacturer ID then the ID is set to none and the record will not be posted. */
+    If there is no manufacturer ID then the ID is set to none and the ID will be set by the DBMS**/
     public function editaddmanufacturerSubmit() {
 
         if(isset($_POST['submit'])) {
