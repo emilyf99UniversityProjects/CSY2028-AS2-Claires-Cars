@@ -29,7 +29,7 @@ class Manufacturers {
         }
     }
 
-    /*When the delete button is clicked on a page then the id of the manufactuer is taken from the ID 
+    /*When the delete button is clicked on a page then the id of the manufactuer is taken from the ID in the URL
     and is used to remove that record from the database.
       Once the record is deleted the user gets a prompt telling them the record has been removed*/
     public function deletemanufacturerSubmit() {
@@ -46,7 +46,7 @@ class Manufacturers {
 
     /*Once the edit or add button has been selected the changes have been saved to the record and a prompt
     is displayed to let the user know thier changes have been made.
-    If there is no manufacturer ID then the ID is set to none and the ID will be set by the DBMS**/
+    If there is no manufacturer ID then the ID is set to none and the ID will be set by the DBMS*/
     public function editaddmanufacturerSubmit() {
 
         if(isset($_POST['submit'])) {

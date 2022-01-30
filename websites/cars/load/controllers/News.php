@@ -81,7 +81,7 @@ namespace load\controllers;
                 $this->newsconnect->save($news);
 
                 //when an image is added it takes the id of the record and adds a .jpg image extension. 
-                //that file is then moved to the articles picture directiory and the final name is added.
+                //that file is then moved to the articles picture directory and the file name is added.
                 if ($_FILES['image']['error'] == 0) {
                     $fileName = $this->newsconnect->lastInsertId() . '.jpg';
                     move_uploaded_file($_FILES['image']['tmp_name'], 'images/articles/' . $fileName);

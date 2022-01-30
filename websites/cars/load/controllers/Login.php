@@ -118,7 +118,7 @@ namespace load\controllers;
                 ];
             }
         }
-         /*When the delete button is clicked on a page then the id of the admin is taken from the ID 
+         /*When the delete button is clicked on a page then the id of the admin is taken from the ID in the URL
         and is used to remove that record from the database.
         Once the record is deleted the user gets a prompt telling them the record has been removed*/
         public function deleteadminSubmit() {
