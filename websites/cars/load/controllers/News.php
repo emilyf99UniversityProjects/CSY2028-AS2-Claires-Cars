@@ -85,6 +85,7 @@ namespace load\controllers;
                 if ($_FILES['image']['error'] == 0) {
                     $fileName = $this->newsconnect->lastInsertId() . '.jpg';
                     move_uploaded_file($_FILES['image']['tmp_name'], 'images/articles/' . $fileName);
+
                 }
 
                 //when returned a prompt is shown to the user let them know their chnages have been made
