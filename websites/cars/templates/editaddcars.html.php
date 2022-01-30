@@ -28,7 +28,7 @@ require 'leftsectionadmin.html.php';
         <input type="file" name="image" />
         
         <label>Manufacturer: </label>
-        <select name="cars[manufacturerId]">
+        <select name="cars[manufacturerId]" required>
 		<?php
             /*finds each manufacturer in the table and compares their IDs, if there is a match the 
             name is displayed in a drop down for the user to choose from. If statement is to select the current

@@ -39,7 +39,7 @@
 			/*this if statment searches for a before price
 			If the before price is not set to null it will display the record.
 			 If it is null it will not action the echo. */
-			if($car['beforeprice'] == !null) {
+			if($car['beforeprice'] == !null  || $car['beforeprice'] != 0) {
 				echo '<h3>Before Price: £' . $car['beforeprice'] . '</h3>';
 			}
 			echo '<h3>Current Price: £' . $car['price'] . '</h3>';

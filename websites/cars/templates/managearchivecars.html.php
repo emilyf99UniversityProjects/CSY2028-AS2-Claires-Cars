@@ -32,7 +32,7 @@ require 'leftsectionadmin.html.php';
         echo '<td><form method="post" action="/cars/unarchive">
         <input type="hidden" name="cars[id]" value="' . $car['id'] . '" />
         <input type="hidden" name="cars[archived]" value="0" /> 
-        <input type="submit" name="submit" value="Remove from  the Archive" /> </form></td>';
+        <input type="submit" name="submit" value="Restore" /> </form></td>';
         //an edit button is displayed in each record that uses the car ID in the link to provide a unique record page
         echo '<td><p><a href = "/cars/editaddcars?id=' .$car['id'] .'">Edit the Car in the Archive</a></p></td>';
          //delete function is on a link, rather than open a new page when clicked it deletes the car straight away

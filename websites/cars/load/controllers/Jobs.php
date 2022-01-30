@@ -59,7 +59,7 @@ namespace load\controllers;
 
             $this->jobsconnect->save($jobs);
             return [
-                'template' => 'editaddjobs.html.php',
+                'template' => 'edit.html.php',
                 'variables' => ['jobs' => $jobs],
                 'title' => 'Claire\'s Cars - Edit and Add Jobs',
                 'class' => 'admin'
