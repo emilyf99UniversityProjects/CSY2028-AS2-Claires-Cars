@@ -17,8 +17,7 @@ require 'leftsectionadmin.html.php';
         echo '<tr>';
 		echo '<div class="details">';
 		echo '<td><h2>' . $car['name'] . '</h2>';
-        //echo '<h2>' . $manufacturer['name'] . ' ' . $car['name'] . '</h2>';
-
+    
          //if there is a before price is not set or is set to 0 then the before price is not displayed
         if($car['beforeprice'] == !null || $car['beforeprice'] != 0 ) {
 			echo '<h3>Before Price: £' . $car['beforeprice'] . '</h3>';
