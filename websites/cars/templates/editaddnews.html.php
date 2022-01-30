@@ -13,7 +13,7 @@ require 'leftsectionadmin.html.php';
         ID is on an auto incrementer-->
         <input type= "hidden" name= "news[id]" value="<?=$news['id'] ?? ''?>"/>
         <label>Title: </label><input type = "text" name="news[title]" value="<?=$news['title'] ?? ''?>"required/>
-        <label>Content: </label><textarea name="news[content]" value="<?=$news['content'] ?? ''?>"required></textarea>
+        <label>Content: </label><input type = "text" name="news[content]" value="<?=$news['content'] ?? ''?>"required/>
       
         <!-- If there is a file that has the same name as the news article ID, 
         then that file is echoed as the cars picture-->

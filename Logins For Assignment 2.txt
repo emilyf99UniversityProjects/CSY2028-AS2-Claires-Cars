@@ -1,0 +1,5 @@
+Username: Admin
+Password: opensesame
+
+Username: Fred
+Password: Test
