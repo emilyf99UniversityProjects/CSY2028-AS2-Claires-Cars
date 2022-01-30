@@ -11,7 +11,7 @@
 
         //if a image file exists with the same ID as the article it is retreived as the article picture
         if (file_exists('images/articles/' . $newsarticle['id'] . '.jpg')) {
-            echo '<tr><a href="images/articles/' . $newsarticle['id'] . '.jpg"><img src="/images/articles/' . $newsarticle['id'] . '.jpg" /></a></tr>';
+            echo '<tr><img src="/images/articles/' . $newsarticle['id'] . '.jpg" /></a></tr>';
         }
 		echo '<tr><h3>' . $newsarticle['content'] . '</h3></tr>';
         echo '<tr>';
